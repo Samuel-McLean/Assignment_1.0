@@ -23,17 +23,17 @@
         <%Bookings bookings = bookingApp.getBookings();%>
         <%
             ArrayList<Booking> userList = new ArrayList();
-            Student student = (Student) session.getAttribute("student");
-            Tutor tutor = (Tutor) session.getAttribute("tutor");
+            User user = (User) session.getAttribute("user");
+            Movie movie = (Movie) session.getAttribute("movie");
             String log = "";
             String type = "";
-            if (student != null) {
-                log = " &lt " + student.getName() + " &gt";
-                type = student.getType();
-                userList = bookings.getUserBookings(bookings.getList(), student.getName());
-            } else if (tutor != null) {
+            if (user != null) {
+                log = " &lt " + user.getName() + " &gt";
+                type = user.getType();
+                userList = bookings.getUserBookings(bookings.getList(), user.getName());
+            } else if (movie != null) {
                 log = " &lt " + tutor.getName() + " &gt";
-                type = tutor.getType();
+                type = movie.getType();
                  userList = bookings.getUserBookings(bookings.getList(), tutor.getName());
             } else {
                 log = " &lt " + " Unkonwn User " + " &gt";

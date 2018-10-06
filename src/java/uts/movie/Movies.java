@@ -3,6 +3,7 @@ package uts.movie;
 import java.io.PrintWriter;
 import java.io.Serializable;
 import java.io.Writer;
+import java.text.DateFormat;
 import java.text.ParseException;
 import java.util.ArrayList;
 import java.util.Date;
@@ -102,7 +103,9 @@ public class Movies  implements Serializable {
             out.println("<td >" + movie.getGenre() + "</td>");
             return movie;
         }).map((movie) -> {
-            out.println("<td >" + movie.getReleaseDate() + "</td>");
+            DateFormat df = new SimpleDateFormat("dd/MM/yyyy");
+            String releaseDate = df.format(movie.getReleaseDate());
+            out.println("<td >" + releaseDate + "</td>");
             return movie;
         }).map((movie) -> {
             out.println("<td >" + movie.getPrice() + "</td>");
