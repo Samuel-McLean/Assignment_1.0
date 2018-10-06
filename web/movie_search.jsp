@@ -11,6 +11,7 @@
         <jsp:useBean id="moviesApp" class="uts.movie.MoviesApplication" scope="application">
             <jsp:setProperty name="moviesApp" property="filePath" value="<%=moviePath%>"/>
         </jsp:useBean>
+        <br><br>
         <%Movies movies = moviesApp.getMovies();%>
         <%
 

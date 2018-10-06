@@ -97,7 +97,7 @@ public class Movies  implements Serializable {
 
         PrintWriter out = new PrintWriter(sout);
 
-        out.print("<table  class=\"results_table\" align=\"center\">");
+        out.print("<table  class=\"results_table\" align=\"left\">");
         out.print("\n<thead><th>Title</th><th>Genre</th><th>Release Date</th><th>Price</th><th>Available Copies</th></thead>");
 
         movieList.stream().map((movie) -> {
