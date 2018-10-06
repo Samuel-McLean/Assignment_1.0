@@ -95,15 +95,14 @@ public class Movies  implements Serializable {
     public ArrayList<Movie> findMovieByDate(String startDate, String endDate) throws ParseException{
         Date min = this.stringToDate(startDate);
         Date max = this.stringToDate(endDate);
-        Date rDate;
         ArrayList<Movie> movieList = new ArrayList();
-        for(Movie movie: list){
-            rDate = movie.getReleaseDate();
+        list.forEach((movie) -> {
+            Date rDate = movie.getReleaseDate();
             //min.before(movie.getReleaseDate()) && max.after(movie.getReleaseDate())
-            if(rDate.after(min) && rDate.before(max)){
+            if (rDate.after(min) && rDate.before(max)) {
                 movieList.add(movie);
             }
-        }
+        });
         return movieList;
     }
     

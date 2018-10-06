@@ -33,9 +33,12 @@
         <table>
             <tr><td align="right"><u><a href="login.jsp">Login</a></u> &emsp;</tr>            
         </table>
-        <div><jsp:include page="search_dates.jsp" flush="true" /> </div>    
+        <div><jsp:include page="search_dates.jsp" flush="true" /> </div>  
+        <br>
         <div><jsp:include page="search_genre.jsp" flush="true" /> </div> 
+        <br>
         <div><jsp:include page="search_title.jsp" flush="true" /> </div> 
+        <br>
         <div><jsp:include page="movie_search.jsp" flush="true" /> </div>  
         <%} else {%>
         <table>

@@ -11,9 +11,7 @@
                 <tr>
                     <td>Genre of Movie:</td>
                     <td><input type="text" name="search"></td>
-                </tr>
-                <tr>
-                    <td></td>
+                    <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
                     <td><input type="submit" value="Search"/></td>
                 </tr>
             </table>
