@@ -8,10 +8,7 @@ import java.text.ParseException;
 import java.util.ArrayList;
 import java.util.Date;
 import java.text.SimpleDateFormat;
-import javax.xml.bind.annotation.XmlAccessType;
-import javax.xml.bind.annotation.XmlAccessorType;
-import javax.xml.bind.annotation.XmlElement;
-import javax.xml.bind.annotation.XmlRootElement;
+import javax.xml.bind.annotation.*;
 
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlRootElement(name="movies")
@@ -61,30 +58,53 @@ public class Movies  implements Serializable {
         return genreMovies;
     }   
     
-    public ArrayList<Movie> findMovie(String search){
-        ArrayList<Movie> found = new ArrayList();
+    
+    /*
         list.stream().filter((movie) -> (movie.getTitle().trim().equalsIgnoreCase(search)
-                || movie.getGenre().trim().equalsIgnoreCase(search))).forEach((tutor) -> {
-            found.add(tutor);
+                || movie.getGenre().trim().equalsIgnoreCase(search))).forEach((movie) -> {
+            found.add(movie);
         });
-        return found;
+    */
+    
+    public ArrayList<Movie> findMovieGenre(String search){
+        ArrayList<Movie> moviesWithGenre = new ArrayList();
+        for(Movie movie: list){
+            if(movie.getGenre().trim().equalsIgnoreCase(search)){
+                moviesWithGenre.add(movie);
+            }
+        }
+        return moviesWithGenre;
     }
     
+    public ArrayList<Movie> findMovieTitle(String search){
+        ArrayList<Movie> moviesWithTitle = new ArrayList();
+        for(Movie movie: list){
+            if(movie.getTitle().trim().equalsIgnoreCase(search)){
+                moviesWithTitle.add(movie);
+            }
+        }
+        return moviesWithTitle;
+    }
+    
+    
     private Date stringToDate(String dateString) throws ParseException{
-        Date date = new SimpleDateFormat("yyyy-MM-dd").parse(dateString);
+        Date date = new SimpleDateFormat().parse(dateString);
         return date; 
     }
     
     public ArrayList<Movie> findMovieByDate(String startDate, String endDate) throws ParseException{
-        Date sD = this.stringToDate(startDate);
-        Date eD = this.stringToDate(endDate);
-        ArrayList<Movie> found = new ArrayList();
+        Date min = this.stringToDate(startDate);
+        Date max = this.stringToDate(endDate);
+        Date rDate;
+        ArrayList<Movie> movieList = new ArrayList();
         for(Movie movie: list){
-            if(sD.after(movie.getReleaseDate()) && eD.before(movie.getReleaseDate())){
-                found.add(movie);
+            rDate = movie.getReleaseDate();
+            //min.before(movie.getReleaseDate()) && max.after(movie.getReleaseDate())
+            if(rDate.after(min) && rDate.before(max)){
+                movieList.add(movie);
             }
         }
-        return found;
+        return movieList;
     }
     
     public void print(ArrayList<Movie> movieList, Writer sout) {
@@ -95,23 +115,23 @@ public class Movies  implements Serializable {
         out.print("\n<thead><th>Title</th><th>Genre</th><th>Release Date</th><th>Price</th><th>Available Copies</th></thead>");
 
         movieList.stream().map((movie) -> {
-            String href = movie.isAvailable() ? "<a class=\"link\" href=\"checkout.jsp?titleSelect=" + movie.getTitle() + "\" >" + movie.getTitle() + "</a>" : movie.getTitle();
-            out.println("<tr > ");
+            String href = movie.isAvailable() ? "<a class=\"link\" href=\"checkout.jsp?titleSelect="+movie.getTitle().trim()+"\">" + movie.getTitle() + "</a>" : movie.getTitle();
+            out.println("<tr> ");
             out.println("<td>" + href + "</td>");
             return movie;
         }).map((movie) -> {
-            out.println("<td >" + movie.getGenre() + "</td>");
+            out.println("<td>" + movie.getGenre() + "</td>");
             return movie;
         }).map((movie) -> {
             DateFormat df = new SimpleDateFormat("dd/MM/yyyy");
             String releaseDate = df.format(movie.getReleaseDate());
-            out.println("<td >" + releaseDate + "</td>");
+            out.println("<td>" + releaseDate + "</td>");
             return movie;
         }).map((movie) -> {
-            out.println("<td >" + movie.getPrice() + "</td>");
+            out.println("<td>" + movie.getPrice() + "</td>");
             return movie;
         }).map((movie) -> {
-            out.println("<td >" + movie.getAvailableCopies() + "</td>");
+            out.println("<td>" + movie.getAvailableCopies() + "</td>");
             return movie;
         }).forEach((_item) -> {
             out.println("</tr>");

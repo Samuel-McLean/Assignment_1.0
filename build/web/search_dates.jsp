@@ -11,17 +11,17 @@
             <table>
                 <tr>
                     <!--// Enter a date for the movie year?-->
-                    <td>Enter upper number here:</td>
+                    <td>Enter End Date here:</td>
                     <td><input type="date" name="endDate" min="2000-01-01"></td>
                 </tr>
                 <tr>
                     <!-- Enter a date after 2019-01-01: -->
-                    <td>Enter lower number here:</td>
+                    <td>Enter Start Date here:</td>
                     <td><input type="date" name="startDate" max="2018-01-01"></td>
                 </tr>
                 <tr>
                     <td></td>
-                    <td><input type="submit" name="search_dates" value="Search"/></td>
+                    <td><input type="submit" value="Search"/></td>
                 </tr>
             </table>
         </form>

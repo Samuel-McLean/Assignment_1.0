@@ -10,11 +10,11 @@
             <table>
                 <tr>
                     <td>Title of Movie:</td>
-                    <td><input type="text" name="search"></td>
+                    <td><input type="text" name="search2"></td>
                 </tr>
                 <tr>
                     <td></td>
-                    <td><input type="submit" name="search_title" value="Search"/></td>
+                    <td><input type="submit" value="Search"/></td>
                 </tr>
             </table>
         </form>

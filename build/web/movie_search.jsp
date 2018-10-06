@@ -16,10 +16,16 @@
         <%
 
             String search = request.getParameter("search");
+            String search2 = request.getParameter("search2");
             String endDate = request.getParameter("endDate");
             String startDate = request.getParameter("startDate");
             if(search != null && !search.equals("")){
-                ArrayList<Movie> returnedMovies = movies.findMovie(search);
+                ArrayList<Movie> returnedMovies = movies.findMovieGenre(search);
+                if (returnedMovies.size() > 0) {
+                    movies.print(returnedMovies, out);
+                }
+            } else if(search2 != null && !search2.equals("")){
+                ArrayList<Movie> returnedMovies = movies.findMovieTitle(search2);
                 if (returnedMovies.size() > 0) {
                     movies.print(returnedMovies, out);
                 }
@@ -29,7 +35,6 @@
                     movies.print(dateMovies, out);
                 } 
             }
-            
         %>
     </body>
 </html>

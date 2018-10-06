@@ -14,7 +14,7 @@
                 </tr>
                 <tr>
                     <td></td>
-                    <td><input type="submit" name="search_genre" value="Search"/></td>
+                    <td><input type="submit" value="Search"/></td>
                 </tr>
             </table>
         </form>
