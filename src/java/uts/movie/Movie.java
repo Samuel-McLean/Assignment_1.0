@@ -39,6 +39,8 @@ public class Movie {
         return this.availableCopies > 0;
     }
     
+    //getters and setters...
+    
     public String getTitle() {
         return title;
     }
