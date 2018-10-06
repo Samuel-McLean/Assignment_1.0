@@ -75,12 +75,6 @@ public class Movies  implements Serializable {
         return date; 
     }
     
-    private String dateToString(Date date){
-        DateFormat df = new SimpleDateFormat("dd/MM/yyyy");
-        String releaseDate = df.format(date);
-        return releaseDate;
-    }
-    
     public ArrayList<Movie> findMovieByDate(String startDate, String endDate) throws ParseException{
         Date sD = this.stringToDate(startDate);
         Date eD = this.stringToDate(endDate);
@@ -109,7 +103,8 @@ public class Movies  implements Serializable {
             out.println("<td >" + movie.getGenre() + "</td>");
             return movie;
         }).map((movie) -> {
-            String releaseDate = this.dateToString(movie.getReleaseDate());
+            DateFormat df = new SimpleDateFormat("dd/MM/yyyy");
+            String releaseDate = df.format(movie.getReleaseDate());
             out.println("<td >" + releaseDate + "</td>");
             return movie;
         }).map((movie) -> {
