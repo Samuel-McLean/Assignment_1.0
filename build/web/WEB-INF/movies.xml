@@ -4,28 +4,28 @@
     <movie>       
         <title>Incredibles 2</title>
         <genre>Action</genre>
-        <releaseDate>5 June 2018</releaseDate>
+        <releaseDate>2018-06-05</releaseDate>
         <price> 8.99 </price>   
         <availableCopies>1000</availableCopies>
     </movie>
     <movie>
         <title>The Dictator</title>
         <genre>Comedy</genre>
-        <releaseDate>16 May 2012</releaseDate>
+        <releaseDate>2012-05-16</releaseDate>
         <price> 7.99 </price>   
         <availableCopies>500</availableCopies>
     </movie>
     <movie>
         <title>IT</title>
         <genre>Horror</genre>
-        <releaseDate>7 September 2017</releaseDate>
+        <releaseDate>2017-09-07</releaseDate>
         <price> 9.99 </price>   
         <availableCopies>300</availableCopies>
     </movie>
     <movie>
         <title>Interstellar</title>
         <genre>Sci-Fi</genre>
-        <releaseDate>6 November 2014</releaseDate>
+        <releaseDate>2014-10-06</releaseDate>
         <price> 10.99 </price>   
         <availableCopies>255</availableCopies>
     </movie>  
