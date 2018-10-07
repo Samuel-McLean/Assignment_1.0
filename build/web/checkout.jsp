@@ -1,6 +1,10 @@
 <%@page import="uts.movie.*"%>
 <%@page import="uts.user.*"%>
 <%@page import="java.util.ArrayList"%>
+<<<<<<< HEAD
+=======
+<%@page import="uts.checkout.*"%>
+>>>>>>> c1bbd9d5afb796e74736bc5734ac92157294eb3d
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
@@ -19,10 +23,10 @@
         <jsp:useBean id="moviesApp" class="uts.movie.MoviesApplication" scope="application">
             <jsp:setProperty name="moviesApp" property="filePath" value="<%=moviePath%>"/>
         </jsp:useBean>
-        <%Users users = userApp.getUsers();%>
-        <%Movies movies = moviesApp.getMovies();%>
+        <%users users = userApp.getUsers();%>
+        <%movies movies = moviesApp.getMovies();%>
         <%
-            User user = (User) session.getAttribute("user");
+            user user = (user) session.getAttribute("user");
             String log = "";
             if (user != null) {
                 log = " &lt " + user.getName() + " &gt";
@@ -41,8 +45,8 @@
                 session.removeAttribute("checkoutMsg");
                 String email = request.getParameter("emailSelect");
                 if (email != null) {
-                    ArrayList<Movies> movieList = new ArrayList();
-                    Movie checkoutMovie = movies.getMovie();
+                    ArrayList<movies> movieList = new ArrayList();
+                    movie checkoutMovie = movies.getMovie();
                     movieList.add(checkoutMovie);
                     if (movieList.size() > 0) {
                         //make a print
@@ -51,7 +55,7 @@
             %>
             <form class="checkout_form_div" method="post" action="main.jsp">
                 <%
-                    checkout.addBooking(new Booking(checkoutTutor.getName(), checkoutTutor.getEmail(), user.getName(), user.getEmail(), checkoutTutor.getSubject(), "active"));
+                    checkout.addBooking(new checkout(checkoutTutor.getName(), checkoutTutor.getEmail(), user.getName(), user.getEmail(), checkoutTutor.getSubject(), "active"));
                     checkoutApp.updateXML(checkout, checkoutPath);
                 %>
                 <input class="button" type="submit" value="Create Booking">
