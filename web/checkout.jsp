@@ -1,5 +1,10 @@
+<%@page import="uts.movie.*"%>
+<%@page import="uts.user.*"%>
 <%@page import="java.util.ArrayList"%>
+<<<<<<< HEAD
+=======
 <%@page import="uts.checkout.*"%>
+>>>>>>> c1bbd9d5afb796e74736bc5734ac92157294eb3d
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
