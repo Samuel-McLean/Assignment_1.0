@@ -1,7 +1,7 @@
-<%@page import="uts.tutor.Tutor"%>
-<%@page import="uts.student.Student"%>
+<%@page import="uts.movie.*"%>
+<%@page import="uts.user.*"%>
 <%@page import="java.util.ArrayList"%>
-<%@page import="uts.booking.*"%>
+<%@page import="uts.checkout.*"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
@@ -17,12 +17,12 @@
         </div>
 
         <% String bookingsPath = application.getRealPath("WEB-INF/bookings.xml");%>        
-        <jsp:useBean id="bookingApp" class="uts.booking.BookingApplication" scope="application">
+        <jsp:useBean id="bookingApp" class="uts.checkout.CheckoutApplication" scope="application">
             <jsp:setProperty name="bookingApp" property="filePath" value="<%=bookingsPath%>"/>
         </jsp:useBean>
-        <%Bookings bookings = bookingApp.getBookings();%>
+        <%checkout c1 = checkoutApplication.getCheckout();%>
         <%
-            ArrayList<Booking> userList = new ArrayList();
+            ArrayList<checkout> userList = new ArrayList();
             User user = (User) session.getAttribute("user");
             Movie movie = (Movie) session.getAttribute("movie");
             String log = "";
@@ -30,11 +30,11 @@
             if (user != null) {
                 log = " &lt " + user.getName() + " &gt";
                 type = user.getType();
-                userList = bookings.getUserBookings(bookings.getList(), user.getName());
+                userList = checkout.getUserBookings(checkouts.getList(), user.getName());
             } else if (movie != null) {
-                log = " &lt " + tutor.getName() + " &gt";
+                log = " &lt " + movie.getName() + " &gt";
                 type = movie.getType();
-                 userList = bookings.getUserBookings(bookings.getList(), tutor.getName());
+                 userList = checkout.getUserBookings(checkout.getList(), movie.getName());
             } else {
                 log = " &lt " + " Unkonwn User " + " &gt";
             }
@@ -47,8 +47,8 @@
         </table>
         <form>
             <%
-                if (bookings.getList().size() > 0) {
-                    bookings.printBookings(userList, out);
+                if (checkout.getList().size() > 0) {
+                    checkout.printBookings(userList, out);
                     userList=null;
                 }
             %>   
