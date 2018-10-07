@@ -73,7 +73,7 @@ public class Movies  implements Serializable {
     
     //Takes a string and converts it into a date.
     private Date stringToDate(String dateString) throws ParseException{
-        Date date = new SimpleDateFormat().parse(dateString);
+        Date date = new SimpleDateFormat("yyyy-MM-dd").parse(dateString);
         return date; 
     }
     

@@ -17,26 +17,24 @@
                     <!-- Enter a date after 2000-01-01: -->
                     <td>&nbsp;End Date:&nbsp;</td>
                     <td><input type="date" name="endDate" min="2000-01-01">&nbsp;&nbsp;</td>
-                    <td><input type="submit" value="Search"/></td>
                 </tr>
             </table>
         <br>
             <table>
                 <tr>
                     <td>Genre of Movie:</td>
-                    <td><input type="text" name="search"></td>
+                    <td><input type="text" name="genre"></td>
                     <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
-                    <td><input type="submit" value="Search"/></td>
                 </tr>
             </table>
         <br>
             <table>
                 <tr>
                     <td>Title of Movie:&nbsp;&nbsp;</td>
-                    <td><input type="text" name="search2"></td>
+                    <td><input type="text" name="title"></td>
                     <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
-                    <td><input type="submit" value="Search"/></td>
                 </tr>
+                <tr><td></td><td></td><td></td><td><input type="submit" value="Search"/></td></tr>
             </table>
         </form>
     </body>

@@ -15,17 +15,17 @@
         <%Movies movies = moviesApp.getMovies();%>
         <%
 
-            String search = request.getParameter("search");
-            String search2 = request.getParameter("search2");
-            String endDate = request.getParameter("endDate");
+            String genreSearch = request.getParameter("genre");
+            String titleSearch = request.getParameter("title");
             String startDate = request.getParameter("startDate");
-            if(search != null && !search.equals("")){
-                ArrayList<Movie> returnedMovies = movies.findMovieGenre(search);
+            String endDate = request.getParameter("endDate");
+            if(genreSearch != null && !genreSearch.equals("")){
+                ArrayList<Movie> returnedMovies = movies.findMovieGenre(genreSearch);
                 if (returnedMovies.size() > 0) {
                     movies.print(returnedMovies, out);
                 }
-            } else if(search2 != null && !search2.equals("")){
-                ArrayList<Movie> returnedMovies = movies.findMovieTitle(search2);
+            } else if(titleSearch != null && !titleSearch.equals("")){
+                ArrayList<Movie> returnedMovies = movies.findMovieTitle(titleSearch);
                 if (returnedMovies.size() > 0) {
                     movies.print(returnedMovies, out);
                 }
