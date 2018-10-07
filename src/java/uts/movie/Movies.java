@@ -105,13 +105,13 @@ public class Movies  implements Serializable {
 
         PrintWriter out = new PrintWriter(sout);
 
-        out.print("<table  class=\"results_table\" align=\"left\">");
+        out.print("<table  class=\"results_table\" id=\"rt\"align=\"left\">");
         out.print("\n<thead><th>Title</th><th>Genre</th><th>Release Date</th><th>Price</th><th>Available Copies</th></thead>");
 
         movieList.stream().map((movie) -> {
             String href = movie.isAvailable() ? "<a class=\"link\" href=\"checkout.jsp?titleSelect="+movie.getTitle().trim()+"\">" + movie.getTitle() + "</a>" : movie.getTitle();
-            out.println("<tr> ");
-            out.println("<td>" + href + "</td>");
+            out.println("<tr class=\"results_row\"> ");
+            out.println("<td class=\"title_column\">" + href + "</td>");
             return movie;
         }).map((movie) -> {
             out.println("<td>" + movie.getGenre() + "</td>");

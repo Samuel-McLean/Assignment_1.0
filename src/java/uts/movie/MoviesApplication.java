@@ -65,5 +65,5 @@ public class MoviesApplication implements Serializable {
     public void setMovies(Movies movies) {
         this.movies = movies;
     }
-
+    
 }

@@ -13,28 +13,32 @@
         </jsp:useBean>
         <br><br>
         <%Movies movies = moviesApp.getMovies();%>
-        <%
+        <div class="tbl_align">
+            <div class="tbl_align_inner">
+            <%
 
-            String genreSearch = request.getParameter("genre");
-            String titleSearch = request.getParameter("title");
-            String startDate = request.getParameter("startDate");
-            String endDate = request.getParameter("endDate");
-            if(genreSearch != null && !genreSearch.equals("")){
-                ArrayList<Movie> returnedMovies = movies.findMovieGenre(genreSearch);
-                if (returnedMovies.size() > 0) {
-                    movies.print(returnedMovies, out);
+                String genreSearch = request.getParameter("genre");
+                String titleSearch = request.getParameter("title");
+                String startDate = request.getParameter("startDate");
+                String endDate = request.getParameter("endDate");
+                if(genreSearch != null && !genreSearch.equals("")){
+                    ArrayList<Movie> returnedMovies = movies.findMovieGenre(genreSearch);
+                    if (returnedMovies.size() > 0) {
+                        movies.print(returnedMovies, out);
+                    }
+                } else if(titleSearch != null && !titleSearch.equals("")){
+                    ArrayList<Movie> returnedMovies = movies.findMovieTitle(titleSearch);
+                    if (returnedMovies.size() > 0) {
+                        movies.print(returnedMovies, out);
+                    }
+                } else if(startDate != null && endDate != null && !startDate.equals("") && !endDate.equals("")){
+                    ArrayList<Movie> dateMovies = movies.findMovieByDate(startDate, endDate);
+                    if (dateMovies.size() > 0) {
+                        movies.print(dateMovies, out);
+                    } 
                 }
-            } else if(titleSearch != null && !titleSearch.equals("")){
-                ArrayList<Movie> returnedMovies = movies.findMovieTitle(titleSearch);
-                if (returnedMovies.size() > 0) {
-                    movies.print(returnedMovies, out);
-                }
-            } else if(startDate != null && endDate != null && !startDate.equals("") && !endDate.equals("")){
-                ArrayList<Movie> dateMovies = movies.findMovieByDate(startDate, endDate);
-                if (dateMovies.size() > 0) {
-                    movies.print(dateMovies, out);
-                } 
-            }
-        %>
+            %>
+            </div>
+        </div>
     </body>
 </html>

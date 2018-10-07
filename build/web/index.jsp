@@ -31,7 +31,7 @@
                 session.setAttribute("user", user);
         %>
         <table>
-            <tr><td align="right"><u><a href="login.jsp">Login</a></u> &emsp;</tr>            
+            <tr><td><u><a class="login" href="login.jsp">Login</a></u> &emsp;</tr>            
         </table>
         <div><jsp:include page="movie_search.jsp" flush="true" /> </div>  
         <br><br>

@@ -3,12 +3,13 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <link rel="stylesheet" type="text/css" href="style.css">
         <title>Search Movies</title>
     </head>
     <body>
-        <form action="index.jsp" method="post" target="_self">
-        <p>Search by dates:</p>
-            <table>
+        <form action="index.jsp" id="Dates" method="post" target="_self">
+            <h3 class="sub_heading">Search For Movies by:</h3>
+            <table class="search_table" align="center">
                 <tr>
                     <!--// Enter a date for the movie year?-->
                     <!-- Enter a date before 2018-01-01: -->
@@ -16,25 +17,30 @@
                     <td><input type="date" name="startDate" max="2018-01-01"></td>
                     <!-- Enter a date after 2000-01-01: -->
                     <td>&nbsp;End Date:&nbsp;</td>
-                    <td><input type="date" name="endDate" min="2000-01-01">&nbsp;&nbsp;</td>
+                    <td><input type="date" name="endDate" min="2000-01-01"><input type="submit" class="button_styles" value="Search"/></td>
                 </tr>
             </table>
+        </form>
         <br>
-            <table>
+        <form action="index.jsp" id="Genre" method="post" target="_self">
+            <table class="search_table" id="text_search" align="center">
                 <tr>
-                    <td>Genre of Movie:</td>
+                    <td>Genre:</td>
                     <td><input type="text" name="genre"></td>
-                    <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+                    <td></td>
+                    <td><input type="submit" class="button_styles" value="Search"/></td>
                 </tr>
             </table>
+        </form>
         <br>
-            <table>
+        <form action="index.jsp" id="Title" method="post" target="_self">
+            <table class="search_table" id="text_search" align="center">
                 <tr>
-                    <td>Title of Movie:&nbsp;&nbsp;</td>
+                    <td>Title:&nbsp;&nbsp;</td>
                     <td><input type="text" name="title"></td>
-                    <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+                    <td></td>
+                    <td><input type="submit" class="button_styles" value="Search"/></td>
                 </tr>
-                <tr><td></td><td></td><td></td><td><input type="submit" value="Search"/></td></tr>
             </table>
         </form>
     </body>

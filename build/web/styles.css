@@ -1,10 +1,102 @@
-/*
-To change this license header, choose License Headers in Project Properties.
-To change this template file, choose Tools | Templates
-and open the template in the editor.
-*/
-/* 
-    Created on : 04/10/2018, 4:47:26 PM
-    Author     : Sam
-*/
 
+.sub_heading{
+    font-size: 16;
+    font-family: Verdana;
+    text-align: center;
+    padding-right: 233px;
+}
+
+body{
+    background-color: #ebeaeb;
+    font-family: Verdana;
+    
+}
+
+.tbl_align{
+    text-align:center;
+}
+.tbl_align_inner{
+    display: inline-block;
+}
+.search_table{
+    font-weight: 600;
+    font-size: 14px;
+}
+
+#text_search{
+    padding-right: 230px;
+}
+
+.results_table{
+    text-align: left;
+}
+.results_row{
+    
+}
+.results_row:hover{
+    background-color:#fafafa;
+}
+
+.title_column{
+    color:#eb95ce;
+    
+}
+
+a.link{
+    text-decoration: none;
+}
+
+/*#fabe2f*/
+a.link:link {
+    color:#50be09;
+    
+}
+
+a.link:visited{
+    color:#89880e;
+}
+
+a.link:hover{
+    color:#88c5d0;
+}
+
+a.link:active{
+    color:#896818;
+}
+
+.login{
+    background-color:#00f8f8;
+    color: black;
+    border-color: black;
+    border-radius: 1000px;
+    padding: 10px 17px;
+    text-align: center;
+    font-family: Helvetica;
+    font-weight:bolder;
+    text-decoration: none;
+    display: inline-block;
+    margin: 0px;
+}
+
+.login:hover{
+    background-color:#a8ffff;
+}
+
+.button_styles{
+    background-color:#838383;
+    color: white;
+    border-color: black;
+    border-radius: 1000px;
+    padding: 5px 7px;
+    text-align: center;
+    font-family: Helvetica;
+    font-weight:bolder;
+    text-decoration: none;
+    display: inline-block;
+    margin-left: 50px;
+    margin-right: -1000px;
+}
+
+.button_styles:hover{
+    background-color:#b5b5b5;
+}
