@@ -69,13 +69,18 @@ a.link:active{
     color: black;
     border-color: black;
     border-radius: 1000px;
-    padding: 10px 17px;
+    padding: 5px 10px;
+    display: inline-block;
+    border-color: black;
+    border-radius: 1000px;
     text-align: center;
     font-family: Helvetica;
     font-weight:bolder;
     text-decoration: none;
     display: inline-block;
-    margin: 0px;
+    border-width:2px;
+    border-style:solid;
+    font-size:15px;
 }
 
 .login:hover{
@@ -98,5 +103,42 @@ a.link:active{
 }
 
 .button_styles:hover{
+    background-color:#b5b5b5;
+}
+
+.button_login{
+    background-color:#00f8f8;
+    color: black;
+    border-color: black;
+    border-radius: 1000px;
+    padding: 5px 7px;
+    text-align: center;
+    font-family: Helvetica;
+    font-weight:bolder;
+    font-size:15px;
+    text-decoration: none;
+    display: inline-block;
+}
+
+.button_login:hover{
+    background-color:#a8ffff;
+}
+
+.link_buttons{
+    background-color:#838383;
+    color: white;
+    border-color: black;
+    border-radius: 1000px;
+    padding: 5px 7px;
+    text-align: center;
+    font-family: Helvetica;
+    font-weight:bolder;
+    text-decoration: none;
+    display: inline-block;
+    border-width:2px;
+    border-style:solid;
+    font-size:15px;
+}
+.link_buttons:hover{
     background-color:#b5b5b5;
 }
