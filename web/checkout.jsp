@@ -1,5 +1,6 @@
+<%@page import="uts.movie.*"%>
+<%@page import="uts.user.*"%>
 <%@page import="java.util.ArrayList"%>
-<%@page import="uts.wsd.*"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
@@ -11,11 +12,11 @@
     </head>
     <body>
         <% String userPath = application.getRealPath("WEB-INF/users.xml");%>
-        <jsp:useBean id="userApp" class="uts.wsd.UserApplication" scope="application">
+        <jsp:useBean id="userApp" class="uts.user.UserApplication" scope="application">
             <jsp:setProperty name="userApp" property="filePath" value="<%=userPath%>"/>
         </jsp:useBean>
         <% String moviePath = application.getRealPath("WEB-INF/movies.xml");%>
-        <jsp:useBean id="moviesApp" class="uts.wsd.MoviesApplication" scope="application">
+        <jsp:useBean id="moviesApp" class="uts.movie.MoviesApplication" scope="application">
             <jsp:setProperty name="moviesApp" property="filePath" value="<%=moviePath%>"/>
         </jsp:useBean>
         <%Users users = userApp.getUsers();%>
