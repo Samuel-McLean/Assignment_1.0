@@ -5,18 +5,21 @@
         <group>
             <file>file:/C:/Users/danyj/Documents/GitHub/Assignment_1.0/web/login.jsp</file>
             <file>file:/C:/Users/danyj/Documents/GitHub/Assignment_1.0/web/register.jsp</file>
-            <file>file:/C:/Users/danyj/Documents/GitHub/Assignment_1.0/web/main.jsp</file>
             <file>file:/C:/Users/danyj/Documents/GitHub/Assignment_1.0/web/WEB-INF/movies.xml</file>
             <file>file:/C:/Users/danyj/Documents/GitHub/Assignment_1.0/web/WEB-INF/users.xml</file>
             <file>file:/C:/Users/danyj/Documents/GitHub/Assignment_1.0/web/account.jsp</file>
+            <file>file:/C:/Users/danyj/Documents/GitHub/Assignment_1.0/web/registerAction.jsp</file>
+            <file>file:/C:/Users/danyj/Documents/GitHub/Assignment_1.0/src/java/uts/movie/Movie.java</file>
             <file>file:/C:/Users/danyj/Documents/GitHub/Assignment_1.0/web/search_genre.jsp</file>
+            <file>file:/C:/Users/danyj/Documents/GitHub/Assignment_1.0/src/java/uts/checkout/CheckoutApplication.java</file>
             <file>file:/C:/Users/danyj/Documents/GitHub/Assignment_1.0/web/checkout.jsp</file>
             <file>file:/C:/Users/danyj/Documents/GitHub/Assignment_1.0/web/styles.css</file>
             <file>file:/C:/Users/danyj/Documents/GitHub/Assignment_1.0/web/history.jsp</file>
             <file>file:/C:/Users/danyj/Documents/GitHub/Assignment_1.0/web/movie_search.jsp</file>
-            <file>file:/C:/Users/danyj/Documents/GitHub/Assignment_1.0/web/movies.xsl</file>
+            <file>file:/C:/Users/danyj/Documents/GitHub/Assignment_1.0/src/java/uts/checkout/Order.java</file>
             <file>file:/C:/Users/danyj/Documents/GitHub/Assignment_1.0/web/WEB-INF/checkout.xml</file>
             <file>file:/C:/Users/danyj/Documents/GitHub/Assignment_1.0/web/index.jsp</file>
+            <file>file:/C:/Users/danyj/Documents/GitHub/Assignment_1.0/src/java/uts/checkout/Orders.java</file>
             <file>file:/C:/Users/danyj/Documents/GitHub/Assignment_1.0/web/cancel.jsp</file>
             <file>file:/C:/Users/danyj/Documents/GitHub/Assignment_1.0/web/results.jsp</file>
             <file>file:/C:/Users/danyj/Documents/GitHub/Assignment_1.0/web/index2.0.jsp</file>
