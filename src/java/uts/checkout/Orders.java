@@ -99,10 +99,9 @@ public class Orders implements Serializable {
         out.print("</table>");
     }
     
-    public ArrayList<Order> getUserOrders(ArrayList<Order> orders,String username){
+    public ArrayList<Order> getUserOrders(String username){
         ArrayList<Order> userList = new ArrayList();
-
-        for(Order order:orders)
+        for(Order order:list)
             if(order.getUserName().equalsIgnoreCase(username) || order.getUserName().equalsIgnoreCase(username))
                 userList.add(order);
         return userList;

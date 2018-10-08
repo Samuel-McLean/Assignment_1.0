@@ -8,34 +8,26 @@
         <title>Main Page</title>
     </head>
     <body>
-        <% 
-            User user = (User)session.getAttribute("user");
-        %>
-        <h1>Order History</h1>
-        
+        <%User user = (User)session.getAttribute("user");%>
         <div style="background: #eee; border: solid 1px #333; text-align: right; width: 100%;">You are logged in as<%=user.getName()%> &lt; <%=user.getEmail()%>&gt;</div>
-        <% String moviesPath = application.getRealPath("WEB-INF/movies.xml");%>
+        <% String ordersPath = application.getRealPath("WEB-INF/movies.xml");%>
         <jsp:useBean id="ordersApp" class="uts.checkout.CheckoutApplication" scope="application">
-            <jsp:setProperty name="moviesApp" property="filePath" value="<%=moviesPath%>"/>
+            <jsp:setProperty name="ordersApp" property="filePath" value="<%=ordersPath%>"/>
         </jsp:useBean>
-        
         <% String userPath = application.getRealPath("WEB-INF/users.xml");%>
         <jsp:useBean id="userApp" class="uts.user.UserApplication" scope="application">
             <jsp:setProperty name="userApp" property="filePath" value="<%=userPath%>"/>
         </jsp:useBean> 
+
+        <h1>Order History</h1>
         
                        
         <%Users users = userApp.getUsers();%>
-        <%
-            if (user == null); 
-            {
-                response.sendRedirect("/login.jsp");
-                return;
-            }
-        %>     
-        
+        <%if (user == null){response.sendRedirect("login.jsp");}%>     
         <%Orders orders = ordersApp.getOrders();%>
         <%
+            //not sure if username is good enough unique identifier for an order, email would be better.
+            orders.getUserOrders(user.getName());
             boolean hasOrder = false;
             if(order != null){
                 hasOrder = true;
