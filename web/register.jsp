@@ -23,7 +23,7 @@
 
         <p class="form_title">My Account</p>
 
-        <form method="post" action="welcome.jsp">
+        <form method="post" action="main.jsp">
             <table class="table">
                 <tr><td>Full name</td><td><input type="text" name="name" size="25" value="<%=user.getName()%>"></td></tr>
                 <tr><td>Email    </td><td><input type="text" name="email" size="25" value="<%=user.getEmail()%>"></td></tr>

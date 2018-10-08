@@ -13,8 +13,8 @@
         </jsp:useBean>
         <br><br>
         <%Movies movies = moviesApp.getMovies();%>
-        <div class="tbl_align">
-            <div class="tbl_align_inner">
+        <div class="center_align">
+            <div class="center_align_inner">
             <%
 
                 String genreSearch = request.getParameter("genre");

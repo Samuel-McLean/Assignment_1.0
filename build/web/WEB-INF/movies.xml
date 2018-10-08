@@ -85,4 +85,11 @@
         <price> 10.99 </price>   
         <availableCopies> 30 </availableCopies>
     </movie>
+    <movie>
+        <title> Jaws 2 </title>
+        <genre> Drama </genre>
+        <releaseDate> 1978-06-16 </releaseDate>
+        <price> 10.99 </price>   
+        <availableCopies> 10 </availableCopies>
+    </movie>
 </movies>
