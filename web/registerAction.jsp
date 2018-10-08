@@ -1,9 +1,3 @@
-<%-- 
-    Document   : registerAction
-    Created on : 08/10/2018, 5:33:41 PM
-    Author     : danyj
---%>
-
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>

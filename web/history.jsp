@@ -1,14 +1,7 @@
-<<<<<<< HEAD
-<%@page import="uts.user.User"%>
-<%@page import="uts.tutor.Movie"%>
-<%@page import="uts.student.User"%>
-<%@page import="java.util.ArrayList"%>
-=======
 <%@page import="uts.movie.*"%>
 <%@page import="uts.user.*"%>
 <%@page import="java.util.ArrayList"%>
 <%@page import="uts.checkout.*"%>
->>>>>>> 8b7d559059345a47b7a9824a822e06b030e26f78
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>

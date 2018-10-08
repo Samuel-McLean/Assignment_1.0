@@ -6,32 +6,6 @@
     -->
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>JSP Page</title>
-        <style>
-            body {
-                background-color: orange;
-            }
-        </style>
-    </head>
-    <body>
-        <h1>Login</h1>
-        <form action="loginAction.jsp" method="post">
-            <table>
-                <tr>
-                    <td>Email</td>
-                    <td><input type="email" name="email"></td>
-                </tr>
-                <tr>
-                    <td>Password</td>
-                    <td><input type="password" name="password"></td>
-                </tr>
-                <tr>
-                    <td>
-                        <input type="submit" value="Login">
-                    </td>
-                </tr>
-            </table>
-        </form>
         <link rel="stylesheet" type="text/css" href="styles.css">
         <%@ taglib uri = "http://java.sun.com/jsp/jstl/core" prefix = "c" %>
         <title>Login</title>
