@@ -1,4 +1,4 @@
-<%@page import="uts.student.*" contentType="text/html" pageEncoding="UTF-8"%>
+<%@page import="uts.user.*" contentType="text/html" pageEncoding="UTF-8"%>
 
 <html>
     <head>
@@ -17,7 +17,7 @@
         
         
         <p align="right"> <a href="CancelOrder.jsp">Cancel Order</a></p>
-        <p align="right"> <a href="accountSettings.jsp">Account Settings</a></p>
+        <p align="right"> <a href="account.jsp">Account Settings</a></p>
         
     </body>
 </html>
