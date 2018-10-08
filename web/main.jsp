@@ -10,7 +10,6 @@
     <body>
         <% 
             User user = (User)session.getAttribute("user");
-            //somewhere below, we need to load a table, with the users order history.
         %>
         <h1>Order History</h1>
         
@@ -28,8 +27,10 @@
                        
         <%Users users = userApp.getUsers();%>
         <%
-            if (user == null){
+            if (user == null); 
+            {
                 response.sendRedirect("/login.jsp");
+                return;
             }
         %>     
         
