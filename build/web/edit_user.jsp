@@ -13,7 +13,7 @@
             <jsp:setProperty name="userApp" property="filePath" value="<%=filePath%>"/>
         </jsp:useBean>
         
-        <%Users users = userAcc.getUsers(); %> 
+        <%Users users = userApp.getUsers(); %> 
         <%
             User user = (User) session.getAttribute("user");
             users.removeUser(user());
