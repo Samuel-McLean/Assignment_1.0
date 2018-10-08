@@ -10,5 +10,7 @@ package uts.checkout;
  * @author Sam
  */
 public class Order {
+    String name;
+    int id;
     
 }

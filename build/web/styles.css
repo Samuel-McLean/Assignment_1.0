@@ -1,10 +1,8 @@
-/*
-To change this license header, choose License Headers in Project Properties.
-To change this template file, choose Tools | Templates
-and open the template in the editor.
-*/
-/* 
-    Created on : 04/10/2018, 4:47:26 PM
-    Author     : Sam
-*/
-
+ARTICLE { font-family: sans-serif;
+  background: white; color: black }
+AUTHOR { margin: 1em; color: red }
+HEADLINE { text-align: right;
+  margin-bottom: 2em }
+PARA { line-height: 1.5;
+  margin-left: 15% }
+INSTRUMENT { color: blue }

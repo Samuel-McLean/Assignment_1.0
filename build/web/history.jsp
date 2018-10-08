@@ -1,12 +1,12 @@
-<%@page import="uts.tutor.Tutor"%>
-<%@page import="uts.student.Student"%>
+<%@page import="uts.user.User"%>
+<%@page import="uts.tutor.Movie"%>
+<%@page import="uts.student.User"%>
 <%@page import="java.util.ArrayList"%>
-<%@page import="uts.booking.*"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
     <head>
-        <link rel="stylesheet" type="text/css" href="mystyle.css">
+        <link rel="stylesheet" type="text/css" href="styles.css">
         <script src="animation.js"></script>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title>Bookings Page</title>
@@ -20,7 +20,7 @@
         <jsp:useBean id="bookingApp" class="uts.booking.BookingApplication" scope="application">
             <jsp:setProperty name="bookingApp" property="filePath" value="<%=bookingsPath%>"/>
         </jsp:useBean>
-        <%Bookings bookings = bookingApp.getBookings();%>
+        <%Booking booking = bookingApp.getBookings();%>
         <%
             ArrayList<Booking> userList = new ArrayList();
             User user = (User) session.getAttribute("user");
@@ -32,7 +32,7 @@
                 type = user.getType();
                 userList = bookings.getUserBookings(bookings.getList(), user.getName());
             } else if (movie != null) {
-                log = " &lt " + tutor.getName() + " &gt";
+                log = " &lt " + movie.getName() + " &gt";
                 type = movie.getType();
                  userList = bookings.getUserBookings(bookings.getList(), tutor.getName());
             } else {
