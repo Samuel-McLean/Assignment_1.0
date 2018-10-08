@@ -8,7 +8,7 @@ import java.util.regex.Pattern;
 public class Validator {
     private String emailPattern = "[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\\.[a-zA-Z]{2,4}";
     private String namePattern = "([A-Z][a-z]+[\\s])+[A-Z][a-z]*";
-    private String passwordPattern = "[a-z]{8,}[0-9]+";
+    private String passwordPattern = "[a-zA-Z]{8,}[0-9]+";
     private HashMap<String, String> errors = new HashMap();
 
     public Validator() {
