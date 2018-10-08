@@ -3,6 +3,7 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
+<<<<<<< HEAD
             <file>file:/C:/Users/danyj/Documents/GitHub/Assignment_1.0/web/login.jsp</file>
             <file>file:/C:/Users/danyj/Documents/GitHub/Assignment_1.0/web/register.jsp</file>
             <file>file:/C:/Users/danyj/Documents/GitHub/Assignment_1.0/web/WEB-INF/movies.xml</file>
@@ -24,6 +25,14 @@
             <file>file:/C:/Users/danyj/Documents/GitHub/Assignment_1.0/web/results.jsp</file>
             <file>file:/C:/Users/danyj/Documents/GitHub/Assignment_1.0/web/index2.0.jsp</file>
             <file>file:/C:/Users/danyj/Documents/GitHub/Assignment_1.0/web/logout.jsp</file>
+=======
+            <file>file:/C:/Users/Samuel/Documents/NetBeansProjects/Assignment%20GitHub/New%20Assignment%20Folder/Assignment_1.0/web/checkout.jsp</file>
+            <file>file:/C:/Users/Samuel/Documents/NetBeansProjects/Assignment%20GitHub/New%20Assignment%20Folder/Assignment_1.0/web/Register2.0.jsp</file>
+            <file>file:/C:/Users/Samuel/Documents/NetBeansProjects/Assignment%20GitHub/New%20Assignment%20Folder/Assignment_1.0/src/java/uts/user/Users.java</file>
+            <file>file:/C:/Users/Samuel/Documents/NetBeansProjects/Assignment%20GitHub/New%20Assignment%20Folder/Assignment_1.0/web/Account_Page.jsp</file>
+            <file>file:/C:/Users/Samuel/Documents/NetBeansProjects/Assignment%20GitHub/New%20Assignment%20Folder/Assignment_1.0/web/history.jsp</file>
+            <file>file:/C:/Users/Samuel/Documents/NetBeansProjects/Assignment%20GitHub/New%20Assignment%20Folder/Assignment_1.0/web/movies.xsl</file>
+>>>>>>> 8b7d559059345a47b7a9824a822e06b030e26f78
         </group>
     </open-files>
 </project-private>

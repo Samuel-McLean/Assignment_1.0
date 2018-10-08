@@ -1,5 +1,10 @@
+<%@page import="uts.movie.*"%>
+<%@page import="uts.user.*"%>
 <%@page import="java.util.ArrayList"%>
-<%@page import="uts.wsd.*"%>
+<<<<<<< HEAD
+=======
+<%@page import="uts.checkout.*"%>
+>>>>>>> c1bbd9d5afb796e74736bc5734ac92157294eb3d
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
@@ -11,11 +16,11 @@
     </head>
     <body>
         <% String userPath = application.getRealPath("WEB-INF/users.xml");%>
-        <jsp:useBean id="userApp" class="uts.wsd.UserApplication" scope="application">
+        <jsp:useBean id="userApp" class="uts.user.UserApplication" scope="application">
             <jsp:setProperty name="userApp" property="filePath" value="<%=userPath%>"/>
         </jsp:useBean>
         <% String moviePath = application.getRealPath("WEB-INF/movies.xml");%>
-        <jsp:useBean id="moviesApp" class="uts.wsd.MoviesApplication" scope="application">
+        <jsp:useBean id="moviesApp" class="uts.movie.MoviesApplication" scope="application">
             <jsp:setProperty name="moviesApp" property="filePath" value="<%=moviePath%>"/>
         </jsp:useBean>
         <%Users users = userApp.getUsers();%>
@@ -41,6 +46,7 @@
                 String email = request.getParameter("emailSelect");
                 if (email != null) {
                     ArrayList<Movies> movieList = new ArrayList();
+                    //need to put the title of the movie you are trying to checkout in getMovie(HERE, PUT IT HERE). 
                     Movie checkoutMovie = movies.getMovie();
                     movieList.add(checkoutMovie);
                     if (movieList.size() > 0) {
@@ -50,7 +56,7 @@
             %>
             <form class="checkout_form_div" method="post" action="main.jsp">
                 <%
-                    checkout.addBooking(new Booking(checkoutTutor.getName(), checkoutTutor.getEmail(), user.getName(), user.getEmail(), checkoutTutor.getSubject(), "active"));
+                    checkout.addBooking(new checkout(checkoutTutor.getName(), checkoutTutor.getEmail(), user.getName(), user.getEmail(), checkoutTutor.getSubject(), "active"));
                     checkoutApp.updateXML(checkout, checkoutPath);
                 %>
                 <input class="button" type="submit" value="Create Booking">

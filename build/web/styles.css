@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 ARTICLE { font-family: sans-serif;
   background: white; color: black }
 AUTHOR { margin: 1em; color: red }
@@ -6,3 +7,163 @@ HEADLINE { text-align: right;
 PARA { line-height: 1.5;
   margin-left: 15% }
 INSTRUMENT { color: blue }
+=======
+
+.sub_heading{
+    font-size: 16;
+    font-family: Verdana;
+    text-align: center;
+    padding-right: 233px;
+}
+
+body{
+    background-color: #ebeaeb;
+    font-family: Verdana;
+    
+}
+
+.center_align{
+    text-align:center;
+}
+.center_align_inner{
+    display: inline-block;
+}
+.search_table{
+    font-weight: 600;
+    font-size: 14px;
+}
+
+#text_search{
+    padding-right: 230px;
+}
+
+.results_table{
+    text-align: left;
+}
+.results_row{
+    
+}
+.results_row:hover{
+    background-color:#fafafa;
+}
+
+.title_column{
+    color:#eb95ce;
+    
+}
+
+a.link{
+    text-decoration: none;
+}
+
+/*#fabe2f*/
+a.link:link {
+    color:#50be09;
+    
+}
+
+a.link:visited{
+    color:#50be09;
+}
+
+a.link:hover{
+    color:#88c5d0;
+}
+
+a.link:active{
+    color:#896818;
+}
+
+.login{
+    background-color:#00f8f8;
+    color: black;
+    border-color: black;
+    border-radius: 1000px;
+    padding: 5px 10px;
+    display: inline-block;
+    border-color: black;
+    border-radius: 1000px;
+    text-align: center;
+    font-family: Helvetica;
+    font-weight:bolder;
+    text-decoration: none;
+    display: inline-block;
+    border-width:2px;
+    border-style:solid;
+    font-size:15px;
+}
+
+.login:hover{
+    background-color:#a8ffff;
+}
+
+.button_styles{
+    background-color:#838383;
+    color: white;
+    border-color: black;
+    border-radius: 1000px;
+    padding: 5px 7px;
+    text-align: center;
+    font-family: Helvetica;
+    font-weight:bolder;
+    text-decoration: none;
+    display: inline-block;
+    margin-left: 50px;
+    margin-right: -1000px;
+}
+
+.button_styles:hover{
+    background-color:#b5b5b5;
+}
+
+.button_login{
+    background-color:#00f8f8;
+    color: black;
+    border-color: black;
+    border-radius: 1000px;
+    padding: 5px 7px;
+    text-align: center;
+    font-family: Helvetica;
+    font-weight:bolder;
+    font-size:15px;
+    text-decoration: none;
+    display: inline-block;
+    margin-left: -70px;
+}
+
+.button_login:hover{
+    background-color:#a8ffff;
+}
+
+.link_buttons{
+    background-color:#838383;
+    color: white;
+    border-color: black;
+    border-radius: 1000px;
+    padding: 5px 7px;
+    text-align: center;
+    font-family: Helvetica;
+    font-weight:bolder;
+    text-decoration: none;
+    display: inline-block;
+    border-width:2px;
+    border-style:solid;
+    font-size:15px;
+}
+.link_buttons:hover{
+    background-color:#b5b5b5;
+}
+
+.float {
+
+}
+
+.right_side{
+    text-align: right;
+    margin-right: 200px;
+}
+
+#back_but{
+    margin-right: 240px;
+}
+>>>>>>> 8b7d559059345a47b7a9824a822e06b030e26f78

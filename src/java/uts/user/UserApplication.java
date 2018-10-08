@@ -58,8 +58,6 @@ public class UserApplication implements Serializable{
         m.marshal(users, fout);
         fout.close();
     }
-    // For the advanced step, you might consider adding a saveUsers() method here
-    // to be used from the welcome.jsp page
 
     public void saveUsers() throws JAXBException, IOException {
         JAXBContext jc = JAXBContext.newInstance(Users.class);
