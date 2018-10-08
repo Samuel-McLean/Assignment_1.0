@@ -19,7 +19,7 @@
         </jsp:useBean>
         <%Movies movies = moviesApp.getMovies();%>
         <%Users users = userApp.getUsers();%>
-        <%
+        <%//may need to delete stuff above this. not sure if this is relevent to this page at all...
             User user = (User) session.getAttribute("user");
             boolean hasUser = false;
             if(user != null){
