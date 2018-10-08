@@ -27,22 +27,23 @@
             }
         %>
         <h2>Index Page</h2>
-        <% if(!hasUser) {
+        <% if(hasUser) {
                 session.setAttribute("user", user);
         %>
+        <table>
+            <tr><u><a href="edit_user.jsp">Account</a></u> &emsp; <u><a href="logout.jsp">Logout</a></u>&emsp; </td></tr>            
+        </table>
+        <div><jsp:include page="movie_search.jsp" flush="true" /> </div>  
+        <br><br>
+        <div><jsp:include page="results.jsp" flush="true" /> </div> 
+        <%} else {%>
         <table>
             <tr><td><u><a class="login" href="login.jsp">Login</a></u> &emsp;</tr>            
         </table>
         <div><jsp:include page="movie_search.jsp" flush="true" /> </div>  
         <br><br>
         <div><jsp:include page="results.jsp" flush="true" /> </div>  
-        <%} else {%>
-        <table>
-            <tr><u><a href="edit_user.jsp">Account</a></u> &emsp; <u><a href="logout.jsp">Logout</a></u>&emsp; </td></tr>            
-        </table>
-        <div><jsp:include page="movie_search.jsp" flush="true" /> </div>  
-        <br><br>
-        <div><jsp:include page="results.jsp" flush="true" /> </div>   
+          
         <%}%>
     </body>
 </html>
