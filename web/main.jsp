@@ -16,7 +16,7 @@
          
         
         
-        <p align="right"> <a href="CancelOrder.jsp">Cancel Order</a></p>
+        <p align="right"> <a href="cancel.jsp">Cancel Order</a></p>
         <p align="right"> <a href="account.jsp">Account Settings</a></p>
         
     </body>
