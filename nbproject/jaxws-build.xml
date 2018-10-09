@@ -40,4 +40,48 @@
                 JAX-WS WSIMPORT SECTION
                 ===================
             -->
+    <target name="wsimport-init" depends="init">
+        <fail if="${wsimport.bad.version}" message="WsImport ant task defined in the classpath ${j2ee.platform.wsimport.classpath} has a serious bug. See http://wiki.netbeans.org/MetroIssue for details."/>
+        <mkdir dir="${build.generated.sources.dir}/jax-ws"/>
+        <property name="j2ee.platform.wsimport.classpath" value="${libs.jaxws21.classpath}"/>
+        <taskdef name="wsimport" classname="com.sun.tools.ws.ant.WsImport">
+            <classpath path="${java.home}/../lib/tools.jar:${j2ee.platform.wsimport.classpath}:${javac.classpath}"/>
+        </taskdef>
+        <condition property="conf-dir" value="${conf.dir}/" else="">
+            <isset property="conf.dir"/>
+        </condition>
+    </target>
+    <target name="wsimport-client-Movie" depends="wsimport-init">
+        <mkdir dir="${build.generated.dir}/jax-wsCache/Movie"/>
+        <wsimport sourcedestdir="${build.generated.dir}/jax-wsCache/Movie" destdir="${build.generated.dir}/jax-wsCache/Movie" wsdl="${basedir}/${conf-dir}xml-resources/web-service-references/Movie/wsdl/localhost_8080/Assignment_1.0/Movie.wsdl" catalog="catalog.xml" encoding="${source.encoding}" extension="true" verbose="true" fork="false" wsdlLocation="http://localhost:8080/Assignment_1.0/Movie?wsdl" xnocompile="true" xendorsed="true" package="uts.ws.soap.client">
+            <depends file="${basedir}/${conf-dir}xml-resources/web-service-references/Movie/wsdl/localhost_8080/Assignment_1.0/Movie.wsdl"/>
+            <produces dir="${build.generated.dir}/jax-wsCache/Movie"/>
+        </wsimport>
+        <copy todir="${build.generated.sources.dir}/jax-ws">
+            <fileset dir="${build.generated.dir}/jax-wsCache/Movie">
+                <include name="**/*.java"/>
+            </fileset>
+        </copy>
+    </target>
+    <target name="wsimport-client-clean-Movie" depends="-init-project">
+        <delete dir="${build.generated.sources.dir}/jax-ws/uts/ws/soap/client"/>
+        <delete dir="${build.generated.dir}/jax-wsCache/Movie"/>
+    </target>
+    <target name="wsimport-client-UsersLogin" depends="wsimport-init">
+        <mkdir dir="${build.generated.dir}/jax-wsCache/UsersLogin"/>
+        <wsimport sourcedestdir="${build.generated.dir}/jax-wsCache/UsersLogin" destdir="${build.generated.dir}/jax-wsCache/UsersLogin" wsdl="${basedir}/${conf-dir}xml-resources/web-service-references/UsersLogin/wsdl/localhost_8080/Assignment_1.0/UsersLogin.wsdl" catalog="catalog.xml" encoding="${source.encoding}" extension="true" verbose="true" fork="false" wsdlLocation="http://localhost:8080/Assignment_1.0/UsersLogin?wsdl" xnocompile="true" xendorsed="true" package="uts.ws.soap.client">
+            <depends file="${basedir}/${conf-dir}xml-resources/web-service-references/UsersLogin/wsdl/localhost_8080/Assignment_1.0/UsersLogin.wsdl"/>
+            <produces dir="${build.generated.dir}/jax-wsCache/UsersLogin"/>
+        </wsimport>
+        <copy todir="${build.generated.sources.dir}/jax-ws">
+            <fileset dir="${build.generated.dir}/jax-wsCache/UsersLogin">
+                <include name="**/*.java"/>
+            </fileset>
+        </copy>
+    </target>
+    <target name="wsimport-client-clean-UsersLogin" depends="-init-project">
+        <delete dir="${build.generated.sources.dir}/jax-ws/uts/ws/soap/client"/>
+        <delete dir="${build.generated.dir}/jax-wsCache/UsersLogin"/>
+    </target>
+    <target name="wsimport-client-generate" depends="wsimport-client-Movie, wsimport-client-UsersLogin"/>
 </project>
