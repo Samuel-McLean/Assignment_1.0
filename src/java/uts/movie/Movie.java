@@ -34,9 +34,25 @@ public class Movie {
         this.availableCopies = availableCopies;
     }
     
+    public Movie orderMovie(String movieTitle, Date movieReleaseDate, int orderedCopies){
+        if(this.title.equals(movieTitle) && this.releaseDate.equals(movieReleaseDate) && isAvailable(orderedCopies)){
+            return this;
+        }
+        return null;
+    }
+    
     // returns a true/false value as to whether or not there are any more copies available of this movie. 
+    private boolean isAvailable(int orderedCopies){
+        int AC = this.availableCopies;
+        if(orderedCopies < AC){
+            this.availableCopies = AC - orderedCopies;
+            return true;
+        }
+        return false;
+    }
+    
     public boolean isAvailable(){
-        return this.availableCopies > 0;
+        return availableCopies > 0;
     }
     
     //getters and setters...

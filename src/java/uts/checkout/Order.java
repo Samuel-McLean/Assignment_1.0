@@ -1,5 +1,6 @@
 package uts.checkout;
 
+import java.util.ArrayList;
 import java.util.Date;
 import java.util.Random;
 import javax.xml.bind.annotation.XmlAccessType;
@@ -7,22 +8,28 @@ import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlRootElement;
 import uts.controller.Validator;
+import uts.movie.Movie;
+import uts.movie.Movies;
 
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlRootElement(name="order")
 public class Order {
     @XmlElement(name = "orderID")
     private String orderID;
-    @XmlElement(name = "movieTitle")
-    private String movieTitle;
-    @XmlElement(name = "genre")
-    private String genre;
-    @XmlElement(name = "price")
-    private double price;
-    @XmlElement(name = "releaseDate")
-    private Date releaseDate;
+    @XmlElement(name = "purchasedMovies")
+    private ArrayList<Movie> purchasedMovies = new ArrayList<Movie>();
+//    @XmlElement(name = "movieTitle")
+//    private String movieTitle;
+//    @XmlElement(name = "genre")
+//    private String genre;
+//    @XmlElement(name = "price")
+//    private double price;
+//    @XmlElement(name = "releaseDate")
+//    private Date releaseDate;
     @XmlElement(name = "copysPurchased")
     private int copysPurchased;
+    @XmlElement(name = "email")
+    private String email;
     @XmlElement(name = "userName")
     private String userName ;
     @XmlElement(name = "method")
@@ -34,17 +41,16 @@ public class Order {
         
     }
 
-    public Order(String movieTitle, String genre, double price, Date releaseDate, int copysPurchased, String userName, String method, String status) {
+    public Order(ArrayList<Movie> moviesOrdered, int copysPurchased, String email, String userName, String method, String status) {
         String randNum = null;
         while(randNum==null){
             randNum = generateRandID();
         }
         this.orderID = randNum;
-        this.movieTitle = movieTitle;
-        this.genre = genre;
-        this.price = price;
-        this.releaseDate = releaseDate;
+        //list of movies ordered
+        this.purchasedMovies = moviesOrdered;
         this.copysPurchased = copysPurchased;
+        this.email = email;
         this.userName = userName;
         this.method = method;
         this.status = status;
@@ -86,36 +92,20 @@ public class Order {
         return orderID;
     }
 
-    public String getMovieTitle() {
-        return movieTitle;
+    public ArrayList<Movie> getPurchasedMovies() {
+        return purchasedMovies;
     }
 
-    public void setMovieTitle(String movieTitle) {
-        this.movieTitle = movieTitle;
+    public void setPurchasedMovies(ArrayList<Movie> purchasedMovies) {
+        this.purchasedMovies = purchasedMovies;
     }
 
-    public String getGenre() {
-        return genre;
+    public String getUserName() {
+        return userName;
     }
 
-    public void setGenre(String genre) {
-        this.genre = genre;
-    }
-
-    public double getPrice() {
-        return price;
-    }
-
-    public void setPrice(double price) {
-        this.price = price;
-    }
-
-    public Date getReleaseDate() {
-        return releaseDate;
-    }
-
-    public void setReleaseDate(Date releaseDate) {
-        this.releaseDate = releaseDate;
+    public void setUserName(String userName) {
+        this.userName = userName;
     }
 
     public int getCopysPurchased() {
@@ -126,12 +116,12 @@ public class Order {
         this.copysPurchased = copysPurchased;
     }
 
-    public String getUserName() {
-        return userName;
+    public String getEmail() {
+        return email;
     }
 
-    public void setUserName(String userName) {
-        this.userName = userName;
+    public void setEmail(String email) {
+        this.email = email;
     }
 
     public String getMethod() {
