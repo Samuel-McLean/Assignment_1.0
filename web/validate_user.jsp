@@ -8,7 +8,7 @@
         <title>Validate User</title>
     </head>
     <body>
-        <% String filePath = application.getRealPath("WEB-INF/students.xml");%>
+        <% String filePath = application.getRealPath("WEB-INF/users.xml");%>
 
         <jsp:useBean id="userApp" class="uts.user.UserApplication" scope="application">
             <jsp:setProperty name="userApp" property="filePath" value="<%=filePath%>"/>
@@ -37,7 +37,7 @@
                 session.setAttribute("passwordErr", "Incorrect password format");
             } else {
                 session.setAttribute("user", user);
-                response.sendRedirect("main.jsp");
+                response.sendRedirect("welcome_user.jsp");
             }}
 
         %>

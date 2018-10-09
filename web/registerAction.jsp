@@ -9,22 +9,22 @@
     </head>
     <body>
         <%
-            String fullName = (String) session.getAttribute("fullName");
-            String email = (String) session.getAttribute("email");
-            String password = (String) session.getAttribute("password");
-            String phoneNumber = (String) session.getAttribute("phoneNumber");
-            String address = (String) session.getAttribute("address");
+            String fullName = request.getParameter("fullName");
+            String email = request.getParameter("email");
+            String password = request.getParameter("password");
+            String phoneNumber = request.getParameter("phoneNumber");
+            String address = request.getParameter("address");
             //need to complete...
             Validator validator = new Validator();
              
-             if(validator.checkEmpty(email, fullName, password)){
+            if(validator.checkEmpty(email, fullName, password)){
                   response.sendRedirect("register.jsp");
                  session.setAttribute("userErr", "Please fill in empty fields!");
-             }else{
+            }else{
                 User user = new User(fullName, email, password, phoneNumber, address);
                 session.setAttribute("user", user);
                 response.sendRedirect("validate_user.jsp");
-             }
+            }
         %>
     </body>
 </html>

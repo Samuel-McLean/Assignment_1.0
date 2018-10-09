@@ -1,6 +1,7 @@
 package uts.user;
 
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.LinkedList;
 import javax.xml.bind.annotation.*;
 import uts.movie.Movie;
@@ -16,8 +17,18 @@ public class User {
     private String password;
     @XmlElement(name = "phoneNum")
     private String phoneNum;
-    @XmlElement(name = "phoneNum")
+    @XmlElement(name = "address")
     private String address;
+    @XmlElement(name = "dateOfBirth")
+    private Date dateOfBirth;
+
+    public Date getDateOfBirth() {
+        return dateOfBirth;
+    }
+
+    public void setDateOfBirth(Date dateOfBirth) {
+        this.dateOfBirth = dateOfBirth;
+    }
     
     @XmlElement(name="movie")
     private LinkedList<Movie> list = new LinkedList<Movie>();
