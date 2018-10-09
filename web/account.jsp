@@ -42,7 +42,7 @@
             }
         %>
         
-        <form action="edit_user.jsp" method="POST">
+        <form action="account.jsp" method="POST">
             <table>
                 <tr><td>Full name</td><td><input type="text" name="name" size="25" value="<%=user.getName()%>"></td></tr>   
                 <tr><td>Email    </td><td><input type="text" name="email" size="25" value="<%=user.getEmail()%>"></td></tr>
@@ -69,7 +69,5 @@
                 users.addUser(user);
                 userApp.updateXML(users, filePath);
             %>
-        </form>
->>>>>>> 8b7d559059345a47b7a9824a822e06b030e26f78
     </body>
 </html>
