@@ -3,41 +3,40 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-<<<<<<< HEAD
-            <file>file:/Users/blah/Documents/GitHub/Assignment_1.0/web/index.jsp</file>
-            <file>file:/Users/blah/Documents/GitHub/Assignment_1.0/web/index.html</file>
-            <file>file:/Users/blah/Documents/GitHub/Assignment_1.0/src/java/uts/checkout/CheckoutApplication.java</file>
-            <file>file:/Users/blah/Documents/GitHub/Assignment_1.0/web/checkout.jsp</file>
-            <file>file:/Users/blah/Documents/GitHub/Assignment_1.0/web/history.jsp</file>
-=======
+            <file>file:/C:/Users/Samuel/Documents/NetBeansProjects/Assignment%20GitHub/New%20Assignment%20Folder/Assignment_1.0/src/java/uts/movie/Movies.java</file>
             <file>file:/C:/Users/Samuel/Documents/NetBeansProjects/Assignment%20GitHub/New%20Assignment%20Folder/Assignment_1.0/src/java/uts/controller/Validator.java</file>
             <file>file:/C:/Users/Samuel/Documents/NetBeansProjects/Assignment%20GitHub/New%20Assignment%20Folder/Assignment_1.0/web/login.jsp</file>
+            <file>file:/C:/Users/Samuel/Documents/NetBeansProjects/Assignment%20GitHub/New%20Assignment%20Folder/Assignment_1.0/web/validate_user.jsp</file>
+            <file>file:/C:/Users/Samuel/Documents/NetBeansProjects/Assignment%20GitHub/New%20Assignment%20Folder/Assignment_1.0/src/java/uts/ws/rest/OrderService.java</file>
+            <file>file:/C:/Users/Samuel/Documents/NetBeansProjects/Assignment%20GitHub/New%20Assignment%20Folder/Assignment_1.0/web/WEB-INF/history.xsd</file>
             <file>file:/C:/Users/Samuel/Documents/NetBeansProjects/Assignment%20GitHub/New%20Assignment%20Folder/Assignment_1.0/web/registerAction.jsp</file>
             <file>file:/C:/Users/Samuel/Documents/NetBeansProjects/Assignment%20GitHub/New%20Assignment%20Folder/Assignment_1.0/web/main.jsp</file>
-            <file>file:/C:/Users/Samuel/Documents/NetBeansProjects/Assignment%20GitHub/New%20Assignment%20Folder/Assignment_1.0/src/java/uts/checkout/CheckoutApplication.java</file>
             <file>file:/C:/Users/Samuel/Documents/NetBeansProjects/Assignment%20GitHub/New%20Assignment%20Folder/Assignment_1.0/src/java/uts/checkout/Order.java</file>
             <file>file:/C:/Users/Samuel/Documents/NetBeansProjects/Assignment%20GitHub/New%20Assignment%20Folder/Assignment_1.0/web/results.jsp</file>
             <file>file:/C:/Users/Samuel/Documents/NetBeansProjects/Assignment%20GitHub/New%20Assignment%20Folder/Assignment_1.0/web/edit_user.jsp</file>
             <file>file:/C:/Users/Samuel/Documents/NetBeansProjects/Assignment%20GitHub/New%20Assignment%20Folder/Assignment_1.0/src/java/uts/user/User.java</file>
-            <file>file:/C:/Users/Samuel/Documents/NetBeansProjects/Assignment%20GitHub/New%20Assignment%20Folder/Assignment_1.0/web/index.jsp</file>
             <file>file:/C:/Users/Samuel/Documents/NetBeansProjects/Assignment%20GitHub/New%20Assignment%20Folder/Assignment_1.0/src/java/uts/user/UserApplication.java</file>
+            <file>file:/C:/Users/Samuel/Documents/NetBeansProjects/Assignment%20GitHub/New%20Assignment%20Folder/Assignment_1.0/web/index.jsp</file>
             <file>file:/C:/Users/Samuel/Documents/NetBeansProjects/Assignment%20GitHub/New%20Assignment%20Folder/Assignment_1.0/web/checkout.jsp</file>
             <file>file:/C:/Users/Samuel/Documents/NetBeansProjects/Assignment%20GitHub/New%20Assignment%20Folder/Assignment_1.0/web/WEB-INF/movies.xsl</file>
             <file>file:/C:/Users/Samuel/Documents/NetBeansProjects/Assignment%20GitHub/New%20Assignment%20Folder/Assignment_1.0/src/java/uts/user/Users.java</file>
             <file>file:/C:/Users/Samuel/Documents/NetBeansProjects/Assignment%20GitHub/New%20Assignment%20Folder/Assignment_1.0/web/logout.jsp</file>
             <file>file:/C:/Users/Samuel/Documents/NetBeansProjects/Assignment%20GitHub/New%20Assignment%20Folder/Assignment_1.0/web/styles.css</file>
             <file>file:/C:/Users/Samuel/Documents/NetBeansProjects/Assignment%20GitHub/New%20Assignment%20Folder/Assignment_1.0/web/register.jsp</file>
+            <file>file:/C:/Users/Samuel/Documents/NetBeansProjects/Assignment%20GitHub/New%20Assignment%20Folder/Assignment_1.0/src/java/uts/ws/rest/UserService.java</file>
             <file>file:/C:/Users/Samuel/Documents/NetBeansProjects/Assignment%20GitHub/New%20Assignment%20Folder/Assignment_1.0/src/java/uts/movie/MoviesApplication.java</file>
+            <file>file:/C:/Users/Samuel/Documents/NetBeansProjects/Assignment%20GitHub/New%20Assignment%20Folder/Assignment_1.0/src/java/uts/checkout/OrderApplication.java</file>
             <file>file:/C:/Users/Samuel/Documents/NetBeansProjects/Assignment%20GitHub/New%20Assignment%20Folder/Assignment_1.0/web/WEB-INF/movies.xml</file>
+            <file>file:/C:/Users/Samuel/Documents/NetBeansProjects/Assignment%20GitHub/New%20Assignment%20Folder/Assignment_1.0/src/java/uts/ws/rest/MovieService.java</file>
             <file>file:/C:/Users/Samuel/Documents/NetBeansProjects/Assignment%20GitHub/New%20Assignment%20Folder/Assignment_1.0/web/loginAction.jsp</file>
-            <file>file:/C:/Users/Samuel/Documents/NetBeansProjects/Assignment%20GitHub/New%20Assignment%20Folder/Assignment_1.0/web/movie_search.jsp</file>
             <file>file:/C:/Users/Samuel/Documents/NetBeansProjects/Assignment%20GitHub/New%20Assignment%20Folder/Assignment_1.0/src/java/uts/checkout/Orders.java</file>
+            <file>file:/C:/Users/Samuel/Documents/NetBeansProjects/Assignment%20GitHub/New%20Assignment%20Folder/Assignment_1.0/web/movie_search.jsp</file>
             <file>file:/C:/Users/Samuel/Documents/NetBeansProjects/Assignment%20GitHub/New%20Assignment%20Folder/Assignment_1.0/web/cancel.jsp</file>
             <file>file:/C:/Users/Samuel/Documents/NetBeansProjects/Assignment%20GitHub/New%20Assignment%20Folder/Assignment_1.0/web/WEB-INF/history.xml</file>
             <file>file:/C:/Users/Samuel/Documents/NetBeansProjects/Assignment%20GitHub/New%20Assignment%20Folder/Assignment_1.0/web/history.jsp</file>
+            <file>file:/C:/Users/Samuel/Documents/NetBeansProjects/Assignment%20GitHub/New%20Assignment%20Folder/Assignment_1.0/src/java/uts/movie/Movie.java</file>
             <file>file:/C:/Users/Samuel/Documents/NetBeansProjects/Assignment%20GitHub/New%20Assignment%20Folder/Assignment_1.0/web/account.jsp</file>
             <file>file:/C:/Users/Samuel/Documents/NetBeansProjects/Assignment%20GitHub/New%20Assignment%20Folder/Assignment_1.0/web/WEB-INF/users.xml</file>
->>>>>>> 6477a9e3a624ab7a3f39b5989c4ec6b2395e1df3
         </group>
     </open-files>
 </project-private>
