@@ -3,13 +3,10 @@
     <type>org.netbeans.modules.web.project</type>
     <configuration>
         <buildExtensions xmlns="http://www.netbeans.org/ns/ant-build-extender/1">
-            <extension file="rest-build.xml" id="rest.5"/>
-            <extension file="jaxws-build.xml" id="jaxws">
-                <dependency dependsOn="wsimport-client-generate" target="-pre-pre-compile"/>
-            </extension>
+            <extension file="jaxws-build.xml" id="jaxws"/>
         </buildExtensions>
         <data xmlns="http://www.netbeans.org/ns/web-project/3">
-            <name>Assingment_1.0</name>
+            <name>Assignment_1.0</name>
             <minimum-ant-version>1.6.5</minimum-ant-version>
             <web-module-libraries>
                 <library dirs="200">
