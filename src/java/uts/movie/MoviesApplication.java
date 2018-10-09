@@ -9,10 +9,6 @@ import java.util.*;
 import java.io.*;
 import javax.xml.bind.*;
 
-/**
- *
- * @author Sam
- */
 public class MoviesApplication implements Serializable {
 
     private String filePath;
@@ -32,12 +28,13 @@ public class MoviesApplication implements Serializable {
     }
 
     public void setFilePath(String filePath) throws JAXBException, FileNotFoundException, IOException {
-        this.filePath = filePath;
+
         // Create the unmarshaller
         JAXBContext jc = JAXBContext.newInstance(Movies.class);
         Unmarshaller u = jc.createUnmarshaller();
-
-// Now unmarshal the object from the file
+        
+        this.filePath = filePath;
+        // Now unmarshal the object from the file
         FileInputStream fin = new FileInputStream(filePath);
         movies = (Movies) u.unmarshal(fin); // This loads the "shop" object
         fin.close();

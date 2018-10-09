@@ -1,3 +1,8 @@
 /nbproject/private/
 /dist/
 /build/
+<<<<<<< HEAD
+dist/Assingment_1.0.war
+=======
+*.war
+>>>>>>> 4f993f52db26907a30c80d14a79b8adcdf1be957

@@ -4,14 +4,14 @@
     <user>
         <fullName>Ryan Heise</fullName>
         <email>ryan@ryanheise.com</email>
-        <password>hello1</password>
+        <password>hellomate1</password>
         <phoneNum>0478385660</phoneNum>
         <address>Padstow</address>
     </user>
     <user>
         <fullName>Joe Bloggs</fullName>
         <email>joe@bloggs.com</email>
-        <password>hello2</password>
+        <password>hellomate2</password>
         <phoneNum>0478385612</phoneNum>
         <address>Ultimo</address>
     </user>
@@ -25,7 +25,7 @@
     <user>
         <fullName>John Smith</fullName>
         <email>john.smith@email.com</email>
-        <password>Hacka2</password>
+        <password>HackaMan2</password>
         <phoneNum>0453896734</phoneNum>   
         <address>16 Woodville Road Chester Hill</address>
     </user> 

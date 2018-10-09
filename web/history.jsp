@@ -6,7 +6,7 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <link rel="stylesheet" type="text/css" href="mystyle.css">
+        <link rel="stylesheet" type="text/css" href="styles.css">
         <script src="animation.js"></script>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title>Bookings Page</title>
@@ -17,10 +17,14 @@
         </div>
 
         <% String bookingsPath = application.getRealPath("WEB-INF/bookings.xml");%>        
-        <jsp:useBean id="bookingApp" class="uts.checkout.CheckoutApplication" scope="application">
+        <jsp:useBean id="bookingApp" class="uts.checkout.OrderApplication" scope="application">
             <jsp:setProperty name="bookingApp" property="filePath" value="<%=bookingsPath%>"/>
         </jsp:useBean>
+<<<<<<< HEAD
+        <%Booking booking = bookingApp.getBookings();%>
+=======
         <%checkout c1 = checkoutApplication.getCheckout();%>
+>>>>>>> 8b7d559059345a47b7a9824a822e06b030e26f78
         <%
             ArrayList<checkout> userList = new ArrayList();
             User user = (User) session.getAttribute("user");

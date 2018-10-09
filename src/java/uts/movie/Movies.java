@@ -99,6 +99,19 @@ public class Movies  implements Serializable {
         return movieList;
     }
     
+    //not sure what purpose this serves, but this exists now...
+    public Movies getMovieByAvailability(int availability){
+        Movies movies = new Movies();
+        ArrayList<Movie> availableList = new ArrayList();
+        for(Movie movie: list){
+            if(movie.getAvailableCopies() > availability){
+                availableList.add(movie);
+            }
+        }
+        movies.list = availableList;
+        return movies;
+    }
+    
     
     //Prints out the table with all the movies from the search...
     public void print(ArrayList<Movie> movieList, Writer sout) {
