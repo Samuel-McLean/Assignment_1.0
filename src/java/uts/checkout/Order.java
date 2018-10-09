@@ -1,7 +1,6 @@
 package uts.checkout;
 
 import java.util.ArrayList;
-import java.util.Date;
 import java.util.Random;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
@@ -9,7 +8,6 @@ import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlRootElement;
 import uts.controller.Validator;
 import uts.movie.Movie;
-import uts.movie.Movies;
 
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlRootElement(name="order")
@@ -18,14 +16,6 @@ public class Order {
     private String orderID;
     @XmlElement(name = "purchasedMovies")
     private ArrayList<Movie> purchasedMovies = new ArrayList<Movie>();
-//    @XmlElement(name = "movieTitle")
-//    private String movieTitle;
-//    @XmlElement(name = "genre")
-//    private String genre;
-//    @XmlElement(name = "price")
-//    private double price;
-//    @XmlElement(name = "releaseDate")
-//    private Date releaseDate;
     @XmlElement(name = "copysPurchased")
     private int copysPurchased;
     @XmlElement(name = "email")
