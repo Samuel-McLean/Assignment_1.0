@@ -1,5 +1,8 @@
 package uts.user;
 
+import java.text.DateFormat;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.LinkedList;
@@ -60,6 +63,18 @@ public class User {
     }
     
     
+    //Takes a string and converts it into a date.
+    public Date stringToDate(String dateString) throws ParseException{
+        Date date = new SimpleDateFormat("yyyy-MM-dd").parse(dateString);
+        return date; 
+    }
+    
+    //Takes a date and converts it into a string.
+    public String dateToString(Date date){
+        DateFormat df = new SimpleDateFormat("dd/MM/yyyy");
+        String dateString = df.format(date);
+        return dateString;
+    }
     
     public String getEmail(){
         return this.email;
