@@ -3,6 +3,13 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
+<<<<<<< HEAD
+            <file>file:/Users/blah/Documents/GitHub/Assignment_1.0/web/index.jsp</file>
+            <file>file:/Users/blah/Documents/GitHub/Assignment_1.0/web/index.html</file>
+            <file>file:/Users/blah/Documents/GitHub/Assignment_1.0/src/java/uts/checkout/CheckoutApplication.java</file>
+            <file>file:/Users/blah/Documents/GitHub/Assignment_1.0/web/checkout.jsp</file>
+            <file>file:/Users/blah/Documents/GitHub/Assignment_1.0/web/history.jsp</file>
+=======
             <file>file:/C:/Users/Samuel/Documents/NetBeansProjects/Assignment%20GitHub/New%20Assignment%20Folder/Assignment_1.0/src/java/uts/controller/Validator.java</file>
             <file>file:/C:/Users/Samuel/Documents/NetBeansProjects/Assignment%20GitHub/New%20Assignment%20Folder/Assignment_1.0/web/login.jsp</file>
             <file>file:/C:/Users/Samuel/Documents/NetBeansProjects/Assignment%20GitHub/New%20Assignment%20Folder/Assignment_1.0/web/registerAction.jsp</file>
@@ -30,6 +37,7 @@
             <file>file:/C:/Users/Samuel/Documents/NetBeansProjects/Assignment%20GitHub/New%20Assignment%20Folder/Assignment_1.0/web/history.jsp</file>
             <file>file:/C:/Users/Samuel/Documents/NetBeansProjects/Assignment%20GitHub/New%20Assignment%20Folder/Assignment_1.0/web/account.jsp</file>
             <file>file:/C:/Users/Samuel/Documents/NetBeansProjects/Assignment%20GitHub/New%20Assignment%20Folder/Assignment_1.0/web/WEB-INF/users.xml</file>
+>>>>>>> 6477a9e3a624ab7a3f39b5989c4ec6b2395e1df3
         </group>
     </open-files>
 </project-private>
