@@ -19,14 +19,6 @@
             <classpath path="${java.home}/../lib/tools.jar:${build.classes.dir}:${j2ee.platform.wsgen.classpath}:${javac.classpath}"/>
         </taskdef>
     </target>
-    <target name="wsgen-Movie" depends="wsgen-init">
-        <copy todir="${build.classes.dir}/META-INF">
-            <fileset dir="${webinf.dir}" includes="wsit-uts.ws.soap.Movie.xml"/>
-        </copy>
-        <wsgen sourcedestdir="${build.generated.sources.dir}/jax-ws" resourcedestdir="${build.generated.sources.dir}/jax-ws/resources/" destdir="${build.generated.sources.dir}/jax-ws" verbose="true" keep="true" genwsdl="true" sei="uts.ws.soap.Movie" xendorsed="true">
-            <classpath path="${java.home}/../lib/tools.jar:${build.classes.dir}:${j2ee.platform.wsgen.classpath}:${javac.classpath}"/>
-        </wsgen>
-    </target>
     <target name="wsgen-UsersLogin" depends="wsgen-init">
         <copy todir="${build.classes.dir}/META-INF">
             <fileset dir="${webinf.dir}" includes="wsit-uts.ws.soap.UsersLogin.xml"/>
@@ -35,9 +27,141 @@
             <classpath path="${java.home}/../lib/tools.jar:${build.classes.dir}:${j2ee.platform.wsgen.classpath}:${javac.classpath}"/>
         </wsgen>
     </target>
+    <target name="wsgen-UsersLogout" depends="wsgen-init">
+        <copy todir="${build.classes.dir}/META-INF">
+            <fileset dir="${webinf.dir}" includes="wsit-uts.ws.soap.UsersLogout.xml"/>
+        </copy>
+        <wsgen sourcedestdir="${build.generated.sources.dir}/jax-ws" resourcedestdir="${build.generated.sources.dir}/jax-ws/resources/" destdir="${build.generated.sources.dir}/jax-ws" verbose="true" keep="true" genwsdl="true" sei="uts.ws.soap.UsersLogout" xendorsed="true">
+            <classpath path="${java.home}/../lib/tools.jar:${build.classes.dir}:${j2ee.platform.wsgen.classpath}:${javac.classpath}"/>
+        </wsgen>
+    </target>
+    <target name="wsgen-History" depends="wsgen-init">
+        <copy todir="${build.classes.dir}/META-INF">
+            <fileset dir="${webinf.dir}" includes="wsit-uts.ws.soap.History.xml"/>
+        </copy>
+        <wsgen sourcedestdir="${build.generated.sources.dir}/jax-ws" resourcedestdir="${build.generated.sources.dir}/jax-ws/resources/" destdir="${build.generated.sources.dir}/jax-ws" verbose="true" keep="true" genwsdl="true" sei="uts.ws.soap.History" xendorsed="true">
+            <classpath path="${java.home}/../lib/tools.jar:${build.classes.dir}:${j2ee.platform.wsgen.classpath}:${javac.classpath}"/>
+        </wsgen>
+    </target>
+    <target name="wsgen-Ordered" depends="wsgen-init">
+        <copy todir="${build.classes.dir}/META-INF">
+            <fileset dir="${webinf.dir}" includes="wsit-uts.ws.soap.Ordered.xml"/>
+        </copy>
+        <wsgen sourcedestdir="${build.generated.sources.dir}/jax-ws" resourcedestdir="${build.generated.sources.dir}/jax-ws/resources/" destdir="${build.generated.sources.dir}/jax-ws" verbose="true" keep="true" genwsdl="true" sei="uts.ws.soap.Ordered" xendorsed="true">
+            <classpath path="${java.home}/../lib/tools.jar:${build.classes.dir}:${j2ee.platform.wsgen.classpath}:${javac.classpath}"/>
+        </wsgen>
+    </target>
     <!--
                 ===================
                 JAX-WS WSIMPORT SECTION
                 ===================
             -->
+    <target name="wsimport-init" depends="init">
+        <fail if="${wsimport.bad.version}" message="WsImport ant task defined in the classpath ${j2ee.platform.wsimport.classpath} has a serious bug. See http://wiki.netbeans.org/MetroIssue for details."/>
+        <mkdir dir="${build.generated.sources.dir}/jax-ws"/>
+        <property name="j2ee.platform.wsimport.classpath" value="${libs.jaxws21.classpath}"/>
+        <taskdef name="wsimport" classname="com.sun.tools.ws.ant.WsImport">
+            <classpath path="${java.home}/../lib/tools.jar:${j2ee.platform.wsimport.classpath}:${javac.classpath}"/>
+        </taskdef>
+        <condition property="conf-dir" value="${conf.dir}/" else="">
+            <isset property="conf.dir"/>
+        </condition>
+    </target>
+    <target name="wsimport-client-Movie" depends="wsimport-init">
+        <mkdir dir="${build.generated.dir}/jax-wsCache/Movie"/>
+        <wsimport sourcedestdir="${build.generated.dir}/jax-wsCache/Movie" destdir="${build.generated.dir}/jax-wsCache/Movie" wsdl="${basedir}/${conf-dir}xml-resources/web-service-references/Movie/wsdl/localhost_8080/Assignment_1.0/Movie.wsdl" catalog="catalog.xml" encoding="${source.encoding}" extension="true" verbose="true" fork="false" wsdlLocation="http://localhost:8080/Assignment_1.0/Movie?wsdl" xnocompile="true" xendorsed="true" package="uts.ws.soap.client">
+            <depends file="${basedir}/${conf-dir}xml-resources/web-service-references/Movie/wsdl/localhost_8080/Assignment_1.0/Movie.wsdl"/>
+            <produces dir="${build.generated.dir}/jax-wsCache/Movie"/>
+        </wsimport>
+        <copy todir="${build.generated.sources.dir}/jax-ws">
+            <fileset dir="${build.generated.dir}/jax-wsCache/Movie">
+                <include name="**/*.java"/>
+            </fileset>
+        </copy>
+    </target>
+    <target name="wsimport-client-clean-Movie" depends="-init-project">
+        <delete dir="${build.generated.sources.dir}/jax-ws/uts/ws/soap/client"/>
+        <delete dir="${build.generated.dir}/jax-wsCache/Movie"/>
+    </target>
+    <target name="wsimport-client-UsersLogin" depends="wsimport-init">
+        <mkdir dir="${build.generated.dir}/jax-wsCache/UsersLogin"/>
+        <wsimport sourcedestdir="${build.generated.dir}/jax-wsCache/UsersLogin" destdir="${build.generated.dir}/jax-wsCache/UsersLogin" wsdl="${basedir}/${conf-dir}xml-resources/web-service-references/UsersLogin/wsdl/localhost_8080/Assignment_1.0/UsersLogin.wsdl" catalog="catalog.xml" encoding="${source.encoding}" extension="true" verbose="true" fork="false" wsdlLocation="http://localhost:8080/Assignment_1.0/UsersLogin?wsdl" xnocompile="true" xendorsed="true" package="uts.ws.soap.client">
+            <depends file="${basedir}/${conf-dir}xml-resources/web-service-references/UsersLogin/wsdl/localhost_8080/Assignment_1.0/UsersLogin.wsdl"/>
+            <produces dir="${build.generated.dir}/jax-wsCache/UsersLogin"/>
+        </wsimport>
+        <copy todir="${build.generated.sources.dir}/jax-ws">
+            <fileset dir="${build.generated.dir}/jax-wsCache/UsersLogin">
+                <include name="**/*.java"/>
+            </fileset>
+        </copy>
+    </target>
+    <target name="wsimport-client-clean-UsersLogin" depends="-init-project">
+        <delete dir="${build.generated.sources.dir}/jax-ws/uts/ws/soap/client"/>
+        <delete dir="${build.generated.dir}/jax-wsCache/UsersLogin"/>
+    </target>
+    <target name="wsimport-client-Ordered" depends="wsimport-init">
+        <mkdir dir="${build.generated.dir}/jax-wsCache/Ordered"/>
+        <wsimport sourcedestdir="${build.generated.dir}/jax-wsCache/Ordered" destdir="${build.generated.dir}/jax-wsCache/Ordered" wsdl="${basedir}/${conf-dir}xml-resources/web-service-references/Ordered/wsdl/localhost_8080/Assignment_1.0/Ordered.wsdl" catalog="catalog.xml" encoding="${source.encoding}" extension="true" verbose="true" fork="false" wsdlLocation="http://localhost:8080/Assignment_1.0/Ordered?wsdl" xnocompile="true" xendorsed="true" package="uts.ws.soap.client">
+            <depends file="${basedir}/${conf-dir}xml-resources/web-service-references/Ordered/wsdl/localhost_8080/Assignment_1.0/Ordered.wsdl"/>
+            <produces dir="${build.generated.dir}/jax-wsCache/Ordered"/>
+        </wsimport>
+        <copy todir="${build.generated.sources.dir}/jax-ws">
+            <fileset dir="${build.generated.dir}/jax-wsCache/Ordered">
+                <include name="**/*.java"/>
+            </fileset>
+        </copy>
+    </target>
+    <target name="wsimport-client-clean-Ordered" depends="-init-project">
+        <delete dir="${build.generated.sources.dir}/jax-ws/uts/ws/soap/client"/>
+        <delete dir="${build.generated.dir}/jax-wsCache/Ordered"/>
+    </target>
+    <target name="wsimport-client-UsersLogin_1" depends="wsimport-init">
+        <mkdir dir="${build.generated.dir}/jax-wsCache/UsersLogin_1"/>
+        <wsimport sourcedestdir="${build.generated.dir}/jax-wsCache/UsersLogin_1" destdir="${build.generated.dir}/jax-wsCache/UsersLogin_1" wsdl="${basedir}/${conf-dir}xml-resources/web-service-references/UsersLogin_1/wsdl/localhost_8080/Assignment_1.0/UsersLogin.wsdl" catalog="catalog.xml" encoding="${source.encoding}" extension="true" verbose="true" fork="false" wsdlLocation="http://localhost:8080/Assignment_1.0/UsersLogin?wsdl" xnocompile="true" xendorsed="true" package="uts.ws.soap.client">
+            <depends file="${basedir}/${conf-dir}xml-resources/web-service-references/UsersLogin_1/wsdl/localhost_8080/Assignment_1.0/UsersLogin.wsdl"/>
+            <produces dir="${build.generated.dir}/jax-wsCache/UsersLogin_1"/>
+        </wsimport>
+        <copy todir="${build.generated.sources.dir}/jax-ws">
+            <fileset dir="${build.generated.dir}/jax-wsCache/UsersLogin_1">
+                <include name="**/*.java"/>
+            </fileset>
+        </copy>
+    </target>
+    <target name="wsimport-client-clean-UsersLogin_1" depends="-init-project">
+        <delete dir="${build.generated.sources.dir}/jax-ws/uts/ws/soap/client"/>
+        <delete dir="${build.generated.dir}/jax-wsCache/UsersLogin_1"/>
+    </target>
+    <target name="wsimport-client-History" depends="wsimport-init">
+        <mkdir dir="${build.generated.dir}/jax-wsCache/History"/>
+        <wsimport sourcedestdir="${build.generated.dir}/jax-wsCache/History" destdir="${build.generated.dir}/jax-wsCache/History" wsdl="${basedir}/${conf-dir}xml-resources/web-service-references/History/wsdl/localhost_8080/Assignment_1.0/History.wsdl" catalog="catalog.xml" encoding="${source.encoding}" extension="true" verbose="true" fork="false" wsdlLocation="http://localhost:8080/Assignment_1.0/History?wsdl" xnocompile="true" xendorsed="true" package="uts.ws.soap.client">
+            <depends file="${basedir}/${conf-dir}xml-resources/web-service-references/History/wsdl/localhost_8080/Assignment_1.0/History.wsdl"/>
+            <produces dir="${build.generated.dir}/jax-wsCache/History"/>
+        </wsimport>
+        <copy todir="${build.generated.sources.dir}/jax-ws">
+            <fileset dir="${build.generated.dir}/jax-wsCache/History">
+                <include name="**/*.java"/>
+            </fileset>
+        </copy>
+    </target>
+    <target name="wsimport-client-clean-History" depends="-init-project">
+        <delete dir="${build.generated.sources.dir}/jax-ws/uts/ws/soap/client"/>
+        <delete dir="${build.generated.dir}/jax-wsCache/History"/>
+    </target>
+    <target name="wsimport-client-UsersLogout" depends="wsimport-init">
+        <mkdir dir="${build.generated.dir}/jax-wsCache/UsersLogout"/>
+        <wsimport sourcedestdir="${build.generated.dir}/jax-wsCache/UsersLogout" destdir="${build.generated.dir}/jax-wsCache/UsersLogout" wsdl="${basedir}/${conf-dir}xml-resources/web-service-references/UsersLogout/wsdl/localhost_8080/Assignment_1.0/UsersLogout.wsdl" catalog="catalog.xml" encoding="${source.encoding}" extension="true" verbose="true" fork="false" wsdlLocation="http://localhost:8080/Assignment_1.0/UsersLogout?wsdl" xnocompile="true" xendorsed="true" package="uts.ws.soap.client">
+            <depends file="${basedir}/${conf-dir}xml-resources/web-service-references/UsersLogout/wsdl/localhost_8080/Assignment_1.0/UsersLogout.wsdl"/>
+            <produces dir="${build.generated.dir}/jax-wsCache/UsersLogout"/>
+        </wsimport>
+        <copy todir="${build.generated.sources.dir}/jax-ws">
+            <fileset dir="${build.generated.dir}/jax-wsCache/UsersLogout">
+                <include name="**/*.java"/>
+            </fileset>
+        </copy>
+    </target>
+    <target name="wsimport-client-clean-UsersLogout" depends="-init-project">
+        <delete dir="${build.generated.sources.dir}/jax-ws/uts/ws/soap/client"/>
+        <delete dir="${build.generated.dir}/jax-wsCache/UsersLogout"/>
+    </target>
+    <target name="wsimport-client-generate" depends="wsimport-client-Movie, wsimport-client-UsersLogin, wsimport-client-Ordered, wsimport-client-UsersLogin_1, wsimport-client-History, wsimport-client-UsersLogout"/>
 </project>

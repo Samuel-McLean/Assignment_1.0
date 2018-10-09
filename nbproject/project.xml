@@ -4,7 +4,9 @@
     <configuration>
         <buildExtensions xmlns="http://www.netbeans.org/ns/ant-build-extender/1">
             <extension file="rest-build.xml" id="rest.5"/>
-            <extension file="jaxws-build.xml" id="jaxws"/>
+            <extension file="jaxws-build.xml" id="jaxws">
+                <dependency dependsOn="wsimport-client-generate" target="-pre-pre-compile"/>
+            </extension>
         </buildExtensions>
         <data xmlns="http://www.netbeans.org/ns/web-project/3">
             <name>Assingment_1.0</name>

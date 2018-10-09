@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<catalog xmlns="urn:oasis:names:tc:entity:xmlns:xml:catalog" prefer="system">
+    <system systemId="http://localhost:8080/Assignment_1.0/Movie?wsdl" uri="src/conf/xml-resources/web-service-references/Movie/wsdl/localhost_8080/Assignment_1.0/Movie.wsdl"/>
+    <system systemId="http://localhost:8080/Assignment_1.0/Movie?xsd=1" uri="src/conf/xml-resources/web-service-references/Movie/wsdl/localhost_8080/Assignment_1.0/Movie.xsd_1.xsd"/>
+    <system systemId="http://localhost:8080/Assignment_1.0/Ordered?wsdl" uri="src/conf/xml-resources/web-service-references/Ordered/wsdl/localhost_8080/Assignment_1.0/Ordered.wsdl"/>
+    <system systemId="http://localhost:8080/Assignment_1.0/Ordered?xsd=1" uri="src/conf/xml-resources/web-service-references/Ordered/wsdl/localhost_8080/Assignment_1.0/Ordered.xsd_1.xsd"/>
+    <system systemId="http://localhost:8080/Assignment_1.0/UsersLogin?wsdl" uri="src/conf/xml-resources/web-service-references/UsersLogin_1/wsdl/localhost_8080/Assignment_1.0/UsersLogin.wsdl"/>
+    <system systemId="http://localhost:8080/Assignment_1.0/UsersLogin?xsd=1" uri="src/conf/xml-resources/web-service-references/UsersLogin_1/wsdl/localhost_8080/Assignment_1.0/UsersLogin.xsd_1.xsd"/>
+    <system systemId="http://localhost:8080/Assignment_1.0/History?wsdl" uri="src/conf/xml-resources/web-service-references/History/wsdl/localhost_8080/Assignment_1.0/History.wsdl"/>
+    <system systemId="http://localhost:8080/Assignment_1.0/History?xsd=1" uri="src/conf/xml-resources/web-service-references/History/wsdl/localhost_8080/Assignment_1.0/History.xsd_1.xsd"/>
+    <system systemId="http://localhost:8080/Assignment_1.0/UsersLogout?wsdl" uri="src/conf/xml-resources/web-service-references/UsersLogout/wsdl/localhost_8080/Assignment_1.0/UsersLogout.wsdl"/>
+    <system systemId="http://localhost:8080/Assignment_1.0/UsersLogout?xsd=1" uri="src/conf/xml-resources/web-service-references/UsersLogout/wsdl/localhost_8080/Assignment_1.0/UsersLogout.xsd_1.xsd"/>
+</catalog>
