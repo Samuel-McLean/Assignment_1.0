@@ -99,6 +99,11 @@ public class Movies  implements Serializable {
         return movieList;
     }
     
+    public ArrayList<Movie> getMovieByAvailability(){
+        
+        return null;
+    }
+    
     
     //Prints out the table with all the movies from the search...
     public void print(ArrayList<Movie> movieList, Writer sout) {

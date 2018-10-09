@@ -11,14 +11,17 @@
     <body>
         <%User user = (User)session.getAttribute("user");%>
         <div style="background: #eee; border: solid 1px #333; text-align: right; width: 100%;">You are logged in as<%=user.getName()%> &lt; <%=user.getEmail()%>&gt;</div>
-        <% String ordersPath = application.getRealPath("WEB-INF/movies.xml");%>
+        
+        <% String ordersPath = application.getRealPath("WEB-INF/history.xml");%>
         <jsp:useBean id="ordersApp" class="uts.checkout.CheckoutApplication" scope="application">
             <jsp:setProperty name="ordersApp" property="filePath" value="<%=ordersPath%>"/>
         </jsp:useBean>
+        
         <% String userPath = application.getRealPath("WEB-INF/users.xml");%>
         <jsp:useBean id="userApp" class="uts.user.UserApplication" scope="application">
             <jsp:setProperty name="userApp" property="filePath" value="<%=userPath%>"/>
         </jsp:useBean> 
+        
         <%Users users = userApp.getUsers();%>
         <%if (user == null){response.sendRedirect("login.jsp");}%>     
         <%Orders orders = ordersApp.getOrders();%>
@@ -36,7 +39,7 @@
             <tr><td><u><a class="account" href="account.jsp">Account Settings</a></u> &emsp;</tr> 
         </table>      
          <%="Your orders will show below when you have made some."%><%}%>
-        <div><jsp:include page="history.jsp" flush="true" /> </div> 
+        <div><%//<jsp:include page="history.jsp" flush="true" />%></div> 
         <br><br>
     </body>
 </html>
