@@ -4,8 +4,14 @@
     <service name="UsersLogin">
       <implementation-class>uts.ws.soap.UsersLogin</implementation-class>
     </service>
-    <service name="Movie">
-      <implementation-class>uts.ws.soap.Movie</implementation-class>
+    <service name="UsersLogout">
+      <implementation-class>uts.ws.soap.UsersLogout</implementation-class>
+    </service>
+    <service name="History">
+      <implementation-class>uts.ws.soap.History</implementation-class>
+    </service>
+    <service name="Ordered">
+      <implementation-class>uts.ws.soap.Ordered</implementation-class>
     </service>
   </services>
   <clients>
