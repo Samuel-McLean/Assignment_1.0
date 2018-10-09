@@ -5,12 +5,13 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <link rel="stylesheet" type="text/css" href="mystyle.css">
+        <link rel="stylesheet" type="text/css" href="styles.css">
         <title>Main Page</title>
     </head>
     <body>
         <%User user = (User)session.getAttribute("user");%>
-        <div style="background: #eee; border: solid 1px #333; text-align: right; width: 100%;">You are logged in as<%=user.getName()%> &lt; <%=user.getEmail()%>&gt;</div>
+        <div class="user_banner">&emsp; You are logged in as <%=user.getName()%> &emsp;|&emsp; Email: <%=user.getEmail()%></div>
+        <div class="right_align_main"><a class="logout" href="logout.jsp">Logout</a></div>
         
         <% String ordersPath = application.getRealPath("WEB-INF/history.xml");%>
         <jsp:useBean id="ordersApp" class="uts.checkout.OrderApplication" scope="application">
@@ -21,6 +22,8 @@
         <jsp:useBean id="userApp" class="uts.user.UserApplication" scope="application">
             <jsp:setProperty name="userApp" property="filePath" value="<%=userPath%>"/>
         </jsp:useBean> 
+        
+        <div><br><u><a class="index_page" href="index.jsp">Index Page</a></u> &emsp;</div>
         
         <%Users users = userApp.getUsers();%>
         <%if (user == null){response.sendRedirect("login.jsp");}%>     
@@ -33,13 +36,16 @@
                 hasOrder = true;
             }
         %>
-        <h1>Order History <%if(!hasOrder){out.print("is Empty!");%></h1>
-         <table>
-            <tr><td><u><a class="cancel" href="cancel.jsp">Cancel Order</a></u> &emsp;</tr> 
-            <tr><td><u><a class="account" href="account.jsp">Account Settings</a></u> &emsp;</tr> 
-        </table>      
-         <%="Your orders will show below when you have made some."%><%}%>
-        <div><%//<jsp:include page="history.jsp" flush="true" />%></div> 
-        <br><br>
+        <div class="center_align">
+            <div class="center_align_inner">
+                <h1>Order History <%if(!hasOrder){out.print("is Empty!");%></h1>
+                 <table>
+                    <tr><td><u><a class="cancel" href="cancel.jsp">Cancel Order</a></u> &emsp; <u><a class="account" href="account.jsp">Account Settings</a></u> &emsp;</tr> 
+                </table>      
+                 <%="Your orders will show below when you have made some."%><%}%>
+                <div><%//<jsp:include page="history.jsp" flush="true" />%></div> 
+                <br><br>
+            </div>
+        </div>
     </body>
 </html>
