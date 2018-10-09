@@ -30,9 +30,9 @@
         <% if(hasUser) {
                 session.setAttribute("user", user);
         %>
-        <table>
-            <tr><u><a href="edit_user.jsp">Account</a></u> &emsp; <u><a href="logout.jsp">Logout</a></u>&emsp; </td></tr>            
-        </table>
+        <div class="right_align"><u><a class="logout" href="logout.jsp">Logout</a></u>&emsp;</div>
+        <div><u><a class="account" href="edit_user.jsp">Account</a></u>&emsp; <u><a class="index_page" href="main.jsp">Main</a></u>&emsp;</div>
+        
         <div><jsp:include page="movie_search.jsp" flush="true" /> </div>  
         <br><br>
         <div><jsp:include page="results.jsp" flush="true" /> </div> 
