@@ -9,10 +9,6 @@ import java.util.*;
 import java.io.*;
 import javax.xml.bind.*;
 
-/**
- *
- * @author Sam
- */
 public class MoviesApplication implements Serializable {
 
     private String filePath;
@@ -37,7 +33,7 @@ public class MoviesApplication implements Serializable {
         JAXBContext jc = JAXBContext.newInstance(Movies.class);
         Unmarshaller u = jc.createUnmarshaller();
 
-// Now unmarshal the object from the file
+        // Now unmarshal the object from the file
         FileInputStream fin = new FileInputStream(filePath);
         movies = (Movies) u.unmarshal(fin); // This loads the "shop" object
         fin.close();

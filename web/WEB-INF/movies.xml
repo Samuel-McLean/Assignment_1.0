@@ -2,33 +2,34 @@
 <?xml-stylesheet type="text/xsl" href="movies.xsl"?>
 <movies>
     <movie>
-        <title>Legend of Zorro</title>
-        <genre>Action</genre>
-        <releasedate>1974-10-16</releasedate>
-        <price> 5.9 </price>
-        <availablecopies>100</availablecopies>
+        <title> Legend of Zorro </title>
+        <genre> Action </genre>
+        <releaseDate> 1974-10-16 </releaseDate>
+        <price> 5.99 </price>
+        <availableCopies> 100 </availableCopies>
     </movie>
     <movie>
-        <title>Inception</title>
-        <genre>Sci-Fi</genre>
-        <releasedate>2010-01-22</releasedate>
-        <price> 14 </price>
-        <availablecopies>324</availablecopies>
+        <title> Inception </title>
+        <genre> Sci-Fi </genre>
+        <releaseDate>2010-01-22</releaseDate>
+        <price> 14.99 </price>
+        <availableCopies> 324 </availableCopies>
     </movie>
-        <movie>
-        <title>Night School</title>
-        <genre>Comedy</genre>
-        <releaseDate>2018-09-28</releaseDate>
+    <movie>
+        <title> Night School </title>
+        <genre> Comedy </genre>
+        <releaseDate> 2018-09-28 </releaseDate>
         <price> 12.99 </price>
-        <availableCopies>455</availableCopies>
+        <availableCopies> 455 </availableCopies>
     </movie>
-        <movie>
-        <title>Nun</title>
+    <movie>
+        <title> Nun </title>
         <genre>Horror</genre>
-        <releaseDate>2018-09-06</releaseDate>
-        <price> 18.0 </price>
-        <availableCopies>350</availableCopies>
-    <movie>       
+        <releaseDate> 2018-09-06 </releaseDate>
+        <price> 17.99 </price>
+        <availableCopies> 350 </availableCopies>
+    </movie>    
+    <movie>   
         <title> Incredibles 2 </title>
         <genre> Action </genre>
         <releaseDate> 2018-06-05 </releaseDate>

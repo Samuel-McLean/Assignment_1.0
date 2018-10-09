@@ -2,9 +2,14 @@ package uts.checkout;
 
 import java.util.Date;
 import java.util.Random;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlRootElement;
 import uts.controller.Validator;
 
+@XmlAccessorType(XmlAccessType.FIELD)
+@XmlRootElement(name="order")
 public class Order {
     @XmlElement(name = "orderID")
     private String orderID;
