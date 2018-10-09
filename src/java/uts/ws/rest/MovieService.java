@@ -12,39 +12,40 @@ import uts.movie.Movie;
 import uts.movie.MoviesApplication;
 import uts.movie.Movies;
 
-@Path("/movieApp")
+@Path("/moviesApplication")
 public class MovieService {    
 
     @Context
     private ServletContext application;
     private MoviesApplication movieApp;
 
-    private MoviesApplication getTutorApp() throws JAXBException, IOException, Exception {
+    private MoviesApplication getMovieApp() throws JAXBException, IOException, Exception {
        
         synchronized (application) {
-           MoviesApplication tutorApp = (MoviesApplication) application.getAttribute("tutorApp");
+           MoviesApplication movieApp = (MoviesApplication) application.getAttribute("movieApp");
             if (movieApp == null) {
                 movieApp = new MoviesApplication();
                 movieApp.setFilePath(application.getRealPath("WEB-INF/movies.xml"));
                 application.setAttribute("movieApp", movieApp);
             }
-            return tutorApp;
+            return movieApp;
         }
     }
-    @Path("welcome")
-    @GET
-    @Produces(MediaType.TEXT_PLAIN)
-    public String welcome() {
-        return "Hello and welcome to UTSTutor";
-    }
+//    @Path("welcome")
+//    @GET
+//    @Produces(MediaType.TEXT_PLAIN)
+//    public String welcome() {
+//        return "Hello and welcome to UTSTutor";
+//    }
     
 
     @Path("movies/{availableCopies}")
     @GET
     @Produces(MediaType.TEXT_XML)
-    public Movies getMovieByAvailability(@PathParam("status") String status) throws JAXBException, IOException, Exception{
+    public Movies getMovieByAvailability(@PathParam("availableCopies") int availableCopies) throws JAXBException, IOException, Exception{
         //need to fix this
-        return null;//getMovieApp().getMoviebyStatus(status);
+        return getMovieApp().getMovies().getMovieByAvailability(availableCopies);
+        //return null;//getMovieApp().getMoviebyStatus(status);
     }
 
     private ExecutorService executorService = java.util.concurrent.Executors.newCachedThreadPool();
@@ -59,9 +60,5 @@ public class MovieService {
                 //asyncResponse.resume(doGetMovies());
             }
         });
-    }
-
-    private Movies getMovieApp() {
-        return movieApp.getMovies();
     }
 }

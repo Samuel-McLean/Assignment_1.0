@@ -2,15 +2,15 @@ package uts.checkout;
 import java.io.*;
 import javax.xml.bind.*;
 
-public class CheckoutApplication implements Serializable {
+public class OrderApplication implements Serializable {
 
     private String filePath;
     private Orders orders;
 
-    public CheckoutApplication() {
+    public OrderApplication() {
     }
 
-    public CheckoutApplication(String filePath, Orders orders) {
+    public OrderApplication(String filePath, Orders orders) {
         super();
         this.filePath = filePath;
         this.orders = orders;

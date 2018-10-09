@@ -17,7 +17,7 @@
         </div>
 
         <% String bookingsPath = application.getRealPath("WEB-INF/bookings.xml");%>        
-        <jsp:useBean id="bookingApp" class="uts.checkout.CheckoutApplication" scope="application">
+        <jsp:useBean id="bookingApp" class="uts.checkout.OrderApplication" scope="application">
             <jsp:setProperty name="bookingApp" property="filePath" value="<%=bookingsPath%>"/>
         </jsp:useBean>
 <<<<<<< HEAD

@@ -9,7 +9,7 @@ import uts.user.User;
 import uts.user.UserApplication;
 import uts.user.Users;
 
-@Path("/studentApp")
+@Path("/userApplication")
 public class UserService {    
 
     @Context
@@ -29,17 +29,17 @@ public class UserService {
             if (userApp == null) {
                 userApp = new UserApplication();
                 userApp.setFilePath(application.getRealPath("WEB-INF/users.xml"));
-                application.setAttribute("studentApp", userApp);
+                application.setAttribute("userApp", userApp);
             }
             return userApp;
         }
     }
-    @Path("welcome")
-    @GET
-    @Produces(MediaType.TEXT_PLAIN)
-    public String welcome() {
-        return "Hello and welcome to UTSTutor";
-    }
+//    @Path("welcome")
+//    @GET
+//    @Produces(MediaType.TEXT_PLAIN)
+//    public String welcome() {
+//        return "Hello and welcome to UTSTutor";
+//    }
     
     @Path("users")
     @GET
