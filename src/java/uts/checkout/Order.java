@@ -26,12 +26,14 @@ public class Order {
     private String method;
     @XmlElement(name = "status")
     private String status;
+    @XmlElement(name = "saleTotal")
+    private double saleTotal;
     private Validator validator = new Validator();
     public Order(){
         
     }
 
-    public Order(ArrayList<Movie> moviesOrdered, int copysPurchased, String email, String userName, String method, String status) {
+    public Order(ArrayList<Movie> moviesOrdered, int copysPurchased, String email, String userName, String method, String status, double saleTotal) {
         String randNum = null;
         while(randNum==null){
             randNum = generateRandID();
@@ -44,6 +46,20 @@ public class Order {
         this.userName = userName;
         this.method = method;
         this.status = status;
+        this.saleTotal = saleTotal;
+    }
+    
+    public Movie getPurchasedMovie(Movie movie){
+        for(Movie m: purchasedMovies){
+            if(m.equals(movie)){
+                return movie;
+            }
+        }
+        return null;
+    }
+    
+    public void removePurchasedMovie(Movie movie){
+        purchasedMovies.remove(movie);
     }
     
     private String validateID(String orderID){
@@ -68,6 +84,12 @@ public class Order {
         }else{
             return validateID(randomNum+"");
         }
+    }
+    
+    public void editOrder(ArrayList<Movie> orderedMovies){
+        
+        
+        this.purchasedMovies = orderedMovies;
     }
     
     public void generateNewOrderID(){
@@ -128,6 +150,14 @@ public class Order {
 
     public void setStatus(String status) {
         this.status = status;
+    }
+    
+    public double getSaleTotal(){
+        return saleTotal;
+    }
+    
+    public void setSaleTotal(double total){
+        this.saleTotal = total;
     }
     
     public boolean verifyStatus(){
