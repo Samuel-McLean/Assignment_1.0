@@ -3,12 +3,20 @@ package uts.ws.soap;
 import javax.jws.WebService;
 import javax.jws.WebMethod;
 import javax.jws.WebParam;
+import uts.user.User;
+import uts.user.Users;
 
 @WebService(serviceName = "UsersLogin")
 public class UsersLogin {
 
-    @WebMethod(operationName = "login")
-    public String hello(@WebParam(name = "name") String txt) {
-        return "Hello " + txt + " !";
+    @WebMethod
+    public Users fetchUsers() {
+        Users users = new Users();
+        return users;
+    }
+    @WebMethod
+    public User fetchUser(String email) {
+        User user = new User();
+        return user;
     }
 }

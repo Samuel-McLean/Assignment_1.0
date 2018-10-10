@@ -32,5 +32,9 @@
                 session.setAttribute("existErr", "User does not exist!");               
             }
         %>
+        <%public Users fetchUsers(){
+            return users;
+}
+}%>
     </body>
 </html>
