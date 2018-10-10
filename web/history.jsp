@@ -7,7 +7,6 @@
 <html>
     <head>
         <link rel="stylesheet" type="text/css" href="styles.css">
-        <script src="animation.js"></script>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title>Bookings Page</title>
     </head>
