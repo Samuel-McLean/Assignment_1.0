@@ -67,7 +67,11 @@ public class Validator {
         return null;
     }
 
-    public boolean test_edit(String name, String password, String dob) {
-        return name != null && password != null && dob != null;
+    public boolean test_edit(String name, String password, String email) {
+        return name != null && password != null && email != null;
+    }
+    
+    public boolean validateUser(String name, String email, String password){
+        return validate(namePattern, name) && validate(emailPattern, email) && validate(passwordPattern, password);
     }
 }

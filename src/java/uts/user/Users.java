@@ -1,6 +1,5 @@
 package uts.user;
  
-import uts.user.User;
 import java.util.*;
 import java.io.Serializable;
 import javax.xml.bind.annotation.*;
@@ -10,7 +9,8 @@ import javax.xml.bind.annotation.*;
 public class Users implements Serializable {
     
     @XmlElement(name="user")
-    private ArrayList<User> list = new ArrayList<User>();
+    private ArrayList<User> list = new ArrayList<>();
+    
     public ArrayList<User> getList() {
         return list;
     }
@@ -37,6 +37,10 @@ public class Users implements Serializable {
             }
         }
         return null;
+    }
+    
+    public boolean exist(User user){        
+        return list.contains(user);
     }
     
     public User login(String email, String password) {
