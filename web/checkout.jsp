@@ -64,8 +64,6 @@
 
         <% if (user != null) {
                 session.setAttribute("user", user);
-            } else if (tutor != null) {
-                session.setAttribute("tutor", tutor);
             }
         %>
     </body>
