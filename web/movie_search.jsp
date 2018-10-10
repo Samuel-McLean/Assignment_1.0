@@ -5,6 +5,7 @@
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <link rel="stylesheet" type="text/css" href="style.css">
         <title>Search Movies</title>
+        <%//ADD JSP TO GET AN ERROR TO BE SENT OF THE USER SEARCHES FOR SOMETHING THAT IS NOT RETURNED%>
     </head>
     <body>
         <form action="index.jsp" id="Dates" method="post" target="_self">
