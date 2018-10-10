@@ -33,7 +33,7 @@ public class User {
         this.dateOfBirth = dateOfBirth;
     }
     
-    @XmlElement(name="movie")
+    @XmlElement(name="movies")
     private LinkedList<Movie> list = new LinkedList<Movie>();
     //MoL is Movies on Loan.
     public LinkedList<Movie> getMoL() {
@@ -72,6 +72,12 @@ public class User {
     //Takes a date and converts it into a string.
     public String dateToString(Date date){
         DateFormat df = new SimpleDateFormat("dd/MM/yyyy");
+        String dateString = df.format(date);
+        return dateString;
+    }
+    
+    public String dateToStringXML(Date date){
+        DateFormat df = new SimpleDateFormat("yyyy-MM-dd");
         String dateString = df.format(date);
         return dateString;
     }

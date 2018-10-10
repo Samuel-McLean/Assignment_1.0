@@ -286,3 +286,22 @@ a.link:active{
 .index_page:hover{
     background-color:#a86adc;
 }
+
+.cancel_button{
+    background-color:#ff0000;
+    color: white;
+    border-color: black;
+    border-radius: 1000px;
+    padding: 5px 7px;
+    text-align: center;
+    font-family: Helvetica;
+    font-weight:bolder;
+    text-decoration: none;
+    display: inline-block;
+    border-width:2px;
+    border-style:solid;
+    font-size:15px;
+}
+.cancel_button:hover{
+    background-color:#ff2b1b;
+}
