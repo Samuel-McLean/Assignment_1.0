@@ -305,3 +305,26 @@ a.link:active{
 .cancel_button:hover{
     background-color:#ff2b1b;
 }
+
+
+.update_button{
+    background-color:#6dc62e;
+    color: white;
+    border-color: black;
+    border-radius: 1000px;
+    padding: 4px 10px;
+    text-align: center;
+    font-family: Helvetica;
+    font-weight:bolder;
+    font-size: 15px;
+    text-decoration: none;
+    display: inline-block;
+    margin-left: 150px;
+    margin-right: 0px;
+    margin-bottom: 10px;
+}
+
+.update_button:hover{
+    background-color:#6de024;
+    
+}
