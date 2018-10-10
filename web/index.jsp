@@ -22,19 +22,19 @@
         <%//may need to delete stuff above this. not sure if this is relevent to this page at all...
             User user = (User) session.getAttribute("user");
             boolean hasUser = false;
-            if(user != null){
+            if (user != null) {
                 hasUser = true;
             }
         %>
-        
-        <% if(hasUser) {
+
+        <% if (hasUser) {
                 session.setAttribute("user", user);
         %>
         <div class="user_banner">&emsp; You are logged in as <%=user.getName()%> &emsp;|&emsp; Email: <%=user.getEmail()%></div>
         <h2>Index Page</h2>
         <div class="right_align"><u><a class="logout" href="logout.jsp">Logout</a></u>&emsp;</div>
         <div><u><a class="account" href="account.jsp">Account</a></u>&emsp; <u><a class="index_page" href="main.jsp">Main</a></u>&emsp;</div>
-        
+
         <div><jsp:include page="movie_search.jsp" flush="true" /> </div>  
         <br><br>
         <div><jsp:include page="results.jsp" flush="true" /> </div> 
@@ -46,7 +46,7 @@
         <div><jsp:include page="movie_search.jsp" flush="true" /> </div>  
         <br><br>
         <div><jsp:include page="results.jsp" flush="true" /> </div>  
-          
+
         <%}%>
     </body>
 </html>
