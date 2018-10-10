@@ -1,12 +1,5 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package uts.user;
 
-import uts.user.Users;
-import uts.user.User;
 import java.io.FileInputStream;
 import java.io.FileOutputStream;
 import java.io.IOException;
@@ -76,9 +69,10 @@ public class UserApplication implements Serializable{
         this.users = users;
     }
     
-    public void editUser(User user, String name, String email, String password, String phoneNum, String address) throws Exception{
+    //test this code please
+    public void editUser(User user, String name, String email, String password, String phoneNum, String address, String dob) throws Exception{
         users.removeUser(user);
-        user.updateDetails(name, email, password, phoneNum, address);
+        user.updateUser(name, email, password, phoneNum, address, dob);
         users.addUser(user);
         updateXML(users,filePath);
     }

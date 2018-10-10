@@ -27,11 +27,11 @@
                 <div class="center_align_inner">
                     <table>
                         <tr>
-                            <td>Email:&emsp;&emsp;&emsp;&emsp;<input type="email" name="email" required="true"></td>
+                            <td>Email:&emsp;&emsp;&emsp;&emsp;<input type="email" name="email" required></td>
                             <td><span class="validity" ><c:if test="${emailErr!=null}"><c:out value="${emailErr}"/></span></c:if></td>
                         </tr>
                         <tr>  
-                            <td>Password:&emsp;&emsp;<input type="password" name="password" required="true"></td>
+                            <td>Password:&emsp;&emsp;<input type="password" name="password" required></td>
                             <td><span class="validity" ><c:if test="${passwordErr!=null}"><c:out value="${passwordErr}"/></span></c:if></td>
                         </tr>
                         <tr>

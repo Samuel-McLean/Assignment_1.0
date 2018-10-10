@@ -24,49 +24,46 @@ public class User {
     private String address;
     @XmlElement(name = "dateOfBirth")
     private Date dateOfBirth;
-
-    public Date getDateOfBirth() {
-        return dateOfBirth;
-    }
-
-    public void setDateOfBirth(Date dateOfBirth) {
-        this.dateOfBirth = dateOfBirth;
-    }
     
     @XmlElement(name="movies")
     private LinkedList<Movie> list = new LinkedList<Movie>();
-    //MoL is Movies on Loan.
-    public LinkedList<Movie> getMoL() {
-        return list;
-    }
-    
-    // you may also what to add a reserve list that means when the movie is returned, the user with a reservation will get
-    // proirty access to the movie. 
+
+    //think you need to add a history to user...
     
     public User(){}
     
     public User(String fullName, String email, String password, String phoneNum, String address){
-    
-    this.fullName = fullName;
-    this.email = email;
-    this.password = password;
-    this.phoneNum = phoneNum;
-    this.address = address;
+        this.fullName = fullName;
+        this.email = email;
+        this.password = password;
+        this.phoneNum = phoneNum;
+        this.address = address;
     }
     
-    public void updateDetails(String fullName, String email, String password, String phoneNum, String address){
-    this.email = email;
-    this.fullName = fullName;
-    this.password = password;
-    this.phoneNum = phoneNum;
-    this.address = address; 
+    public User(String fullName, String email, String password, String phoneNum, String address, String dob) throws ParseException{
+        this.fullName = fullName;
+        this.email = email;
+        this.password = password;
+        this.phoneNum = phoneNum;
+        this.address = address;
+        this.dateOfBirth = stringToDate(dob);
     }
+  
+        //MoL is Movies on Loan.
+    public LinkedList<Movie> getMoL() {
+        return list;
+    }
+    // you may also what to add a reserve list that means when the movie is returned, the user with a reservation will get
+    // proirty access to the movie. 
     
     
     //Takes a string and converts it into a date.
     public Date stringToDate(String dateString) throws ParseException{
-        Date date = new SimpleDateFormat("yyyy-MM-dd").parse(dateString);
-        return date; 
+        if(dateString != null && !dateString.equals("")){
+            Date date = new SimpleDateFormat("yyyy-MM-dd").parse(dateString);
+            return date; 
+        }
+        return null;
     }
     
     //Takes a date and converts it into a string.
@@ -115,6 +112,22 @@ public class User {
     }
     public void setAddress(String address){
         this.address = address;
+    }  
+           
+    public Date getDateOfBirth() {
+        return dateOfBirth;
     }
-   
+
+    public void setDateOfBirth(Date dateOfBirth) {
+        this.dateOfBirth = dateOfBirth;
+    }
+    
+    public void updateUser(String name, String email, String password, String phoneNumber, String address, String dob) throws ParseException{
+        this.fullName = name;
+        this.email = email;
+        this.password = password;
+        this.phoneNum = phoneNumber;
+        this.address = address;
+        this.dateOfBirth = stringToDate(dob);
+    }
 }
