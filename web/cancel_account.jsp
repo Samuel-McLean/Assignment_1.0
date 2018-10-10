@@ -1,9 +1,3 @@
-<%-- 
-    Document   : cancel_account
-    Created on : 10/10/2018, 1:50:51 PM
-    Author     : Sam
---%>
-
 <%@page import="uts.checkout.Orders"%>
 <%@page import="uts.checkout.Order"%>
 <%@page import="java.util.ArrayList"%>

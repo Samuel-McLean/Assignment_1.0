@@ -36,7 +36,10 @@
                     if (dateMovies.size() > 0) {
                         movies.print(dateMovies, out);
                     } 
-                }
+                    
+                }else{
+                        out.print("No movies match your search");
+                    }
             %>
             </div>
         </div>
