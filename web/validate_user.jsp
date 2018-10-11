@@ -1,5 +1,6 @@
 <%@page import="uts.movie.user.*"%>
 <%@page import="uts.controller.Validator"%>
+<%@page import="uts.movie.user.*"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
@@ -10,7 +11,7 @@
     <body>
         <% String filePath = application.getRealPath("WEB-INF/users.xml");%>
 
-        <jsp:useBean id="userApp" class="uts.user.UserApplication" scope="application">
+        <jsp:useBean id="userApp" class="uts.movie.user.UserApplication" scope="application">
             <jsp:setProperty name="userApp" property="filePath" value="<%=filePath%>"/>
         </jsp:useBean>
         <%

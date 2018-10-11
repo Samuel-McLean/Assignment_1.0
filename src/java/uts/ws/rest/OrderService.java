@@ -14,8 +14,8 @@ import javax.ws.rs.Produces;
 import javax.ws.rs.core.Context;
 import javax.ws.rs.core.MediaType;
 import javax.xml.bind.JAXBException;
-import uts.checkout.OrderApplication;
-import uts.checkout.Orders;
+import uts.movie.checkout.OrderApplication;
+import uts.movie.checkout.Orders;
 
 
 @Path("/orderApp")

@@ -4,8 +4,8 @@
     Author     : Sam
 --%>
 
-<%@page import="uts.user.User"%>
-<%@page import="uts.user.Users"%>
+<%@page import="uts.movie.user.User"%>
+<%@page import="uts.movie.user.Users"%>
 <%@page import="uts.controller.Validator"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
@@ -16,7 +16,7 @@
     </head>
     <% String filePath = application.getRealPath("WEB-INF/users.xml");%>
 
-    <jsp:useBean id="userApp" class="uts.user.UserApplication" scope="application">
+    <jsp:useBean id="userApp" class="uts.movie.user.UserApplication" scope="application">
         <jsp:setProperty name="userApp" property="filePath" value="<%=filePath%>"/>
     </jsp:useBean>
     <%Users users = userApp.getUsers(); %>

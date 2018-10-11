@@ -1,4 +1,4 @@
-package uts.checkout;
+package uts.movie.checkout;
 import java.io.*;
 import javax.xml.bind.*;
 

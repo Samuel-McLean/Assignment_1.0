@@ -1,4 +1,4 @@
-<%@page import="uts.user.*" contentType="text/html" pageEncoding="UTF-8"%>
+<%@page import="uts.movie.user.*" contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
     <head>        
@@ -6,7 +6,7 @@
         <title>Welcome User</title>
     </head>     
     <% String filePath = application.getRealPath("WEB-INF/users.xml");%>
-    <jsp:useBean id="userApp" class="uts.user.UserApplication" scope="application">
+    <jsp:useBean id="userApp" class="uts.movie.user.UserApplication" scope="application">
         <jsp:setProperty name="userApp" property="filePath" value="<%=filePath%>"/>
     </jsp:useBean>
     <%Users users = userApp.getUsers();%>

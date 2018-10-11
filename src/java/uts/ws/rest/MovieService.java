@@ -4,13 +4,9 @@ import java.io.IOException;
 import java.util.concurrent.ExecutorService;
 import javax.servlet.ServletContext;
 import javax.ws.rs.*;
-import javax.ws.rs.container.AsyncResponse;
-import javax.ws.rs.container.Suspended;
 import javax.ws.rs.core.*;
 import javax.xml.bind.JAXBException;
-import uts.movie.Movie;
-import uts.movie.MoviesApplication;
-import uts.movie.Movies;
+import uts.movie.*;
 
 @Path("/moviesApplication")
 public class MovieService {    
@@ -46,19 +42,5 @@ public class MovieService {
         //need to fix this
         return getMovieApp().getMovies().getMovieByAvailability(availableCopies);
         //return null;//getMovieApp().getMoviebyStatus(status);
-    }
-
-    private ExecutorService executorService = java.util.concurrent.Executors.newCachedThreadPool();
-
-    @Path(value = "movies")
-    @GET
-    @Produces(value = MediaType.TEXT_XML)
-    public void getMovies(@Suspended final AsyncResponse asyncResponse) {
-        executorService.submit(new Runnable() {
-            public void run() {
-                //need to fix this
-                //asyncResponse.resume(doGetMovies());
-            }
-        });
     }
 }

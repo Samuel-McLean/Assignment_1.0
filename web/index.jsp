@@ -1,6 +1,6 @@
-<%@page import="uts.checkout.*"%>
+<%@page import="uts.movie.checkout.*"%>
 <%@page import="uts.movie.*"%>
-<%@page import="uts.user.*" contentType="text/html" pageEncoding="UTF-8"%>
+<%@page import="uts.movie.user.*" contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
     <head>
@@ -14,7 +14,7 @@
             <jsp:setProperty name="moviesApp" property="filePath" value="<%=moviesPath%>"/>
         </jsp:useBean>
         <% String userPath = application.getRealPath("WEB-INF/users.xml");%>
-        <jsp:useBean id="userApp" class="uts.user.UserApplication" scope="application">
+        <jsp:useBean id="userApp" class="uts.movie.user.UserApplication" scope="application">
             <jsp:setProperty name="userApp" property="filePath" value="<%=userPath%>"/>
         </jsp:useBean>
         <%Movies movies = moviesApp.getMovies();%>
