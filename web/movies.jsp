@@ -18,18 +18,14 @@
                     <th>Price</th>
                     <th>AvailableCopies</th>
                 </tr>
-                <xsl select="catalog/cd">
-                    <tr>
-                        <td><xsl:value-of select="title"/></td>
-                    <td><xsl:value-of select="genre"/></td>
-                    <td><xsl:value-of select="releaseDate"/></td>
-                    <td><xsl:value-of select="price"/></td>
-                    <td><xsl:value-of select="availableCopies"/></td>
-                    </tr>
+            </table>
+
                 </c:set>
 
-                <c:import url = "http://localhost:8080/style.xsl" var = "xslt"/>
-                <x:transform xml = "${xmltext}" xslt = "${xslt}"/>
+                <c:import url = "WEB-INF/wsdl/movies.xsl" var = "xslt"/>
+                <c:import url = "WEB_INF/wsdl/movies.xml" var = "xslt"/>
+                <x:transform xml = "${xml}" xslt = "${xslt}">
 
-                </body>
-                </html>
+                    <x:transform/>          
+                    </body>
+</html>
