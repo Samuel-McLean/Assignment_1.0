@@ -1,0 +1,15 @@
+<html>
+<body>
+<h2>Movies Collection</h2>
+<table border="1">
+<tr bgcolor="#9acd32">
+<th>Title</th><th>Genre</th><th>ReleaseDate</th><th>Price</th><th>AvailableCopies</th>
+</tr>
+<xsl select="catalog/cd">
+<tr>
+<td></td><td></td><td></td><td></td><td></td>
+</tr>
+</xsl>
+</table>
+</body>
+</html>
