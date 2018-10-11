@@ -1,4 +1,4 @@
-package uts.user;
+package uts.movie.user;
 
 import java.io.FileInputStream;
 import java.io.FileOutputStream;

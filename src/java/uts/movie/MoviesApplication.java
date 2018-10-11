@@ -8,19 +8,29 @@ package uts.movie;
 import java.util.*;
 import java.io.*;
 import javax.xml.bind.*;
+import uts.checkout.Orders;
+import uts.movie.user.User;
+import uts.movie.user.Users;
 
 public class MoviesApplication implements Serializable {
 
     private String filePath;
     private Movies movies;
-
+    private Users users;
+    private Orders orders;
+    
     public MoviesApplication() {
+        movies = new Movies();
+        users = new Users();
+        orders = new Orders();
     }
 
-    public MoviesApplication(String filePath, Movies movies) {
+    public MoviesApplication(String filePath, Movies movies, Users users, Orders orders) {
         super();
         this.filePath = filePath;
         this.movies = movies;
+        this.users = users;
+        this.orders = orders;
     }
 
     public String getFilePath() {
@@ -50,6 +60,14 @@ public class MoviesApplication implements Serializable {
         m.marshal(movies, fout);
         fout.close();
     }    
+
+    public Users getUsers() {
+        return users;
+    }
+
+    public Orders getOrders() {
+        return orders;
+    }
     
     public Movies getMovies() {
         return movies;
@@ -61,6 +79,14 @@ public class MoviesApplication implements Serializable {
     
     public void setMovies(Movies movies) {
         this.movies = movies;
+    }
+    
+    private void setOrders(){
+        
+    }
+    
+    public void movieOrder(User user, ArrayList<Movie> movies){
+        
     }
     
 }
