@@ -1,4 +1,4 @@
-package uts.checkout;
+package uts.movie.checkout;
 
 import java.util.ArrayList;
 import java.util.Random;
