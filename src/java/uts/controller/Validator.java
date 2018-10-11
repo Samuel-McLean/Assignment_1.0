@@ -74,4 +74,5 @@ public class Validator {
     public boolean validateUser(String name, String email, String password){
         return validate(namePattern, name) && validate(emailPattern, email) && validate(passwordPattern, password);
     }
+   
 }
