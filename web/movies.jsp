@@ -19,6 +19,7 @@
                     <th>AvailableCopies</th>
                 </tr>
             </table>
+<<<<<<< HEAD
         <xsl select="movies">
             
         </xsl>
@@ -30,4 +31,15 @@
                 <x:transform xml = "${movies.xml}" xslt = "${movies.xsl}"/>
 
     </body>
+=======
+
+                </c:set>
+
+                <c:import url = "WEB-INF/wsdl/movies.xsl" var = "xslt"/>
+                <c:import url = "WEB_INF/wsdl/movies.xml" var = "xslt"/>
+                <x:transform xml = "${xml}" xslt = "${xslt}">
+
+                    <x:transform/>          
+                    </body>
+>>>>>>> fc732612118eb03c9601fc88990523323da84e2f
 </html>
