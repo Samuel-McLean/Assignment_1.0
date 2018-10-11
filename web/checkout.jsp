@@ -28,7 +28,7 @@
             if (user != null) {
                 log = " &lt " + user.getName() + " &gt";
             } else {
-                log = " &lt " + " Unkonwn User " + " &gt";
+                log = " &lt " + " Unknown User " + " &gt";
             }
         %>
         <h2 class="header">Checkout</h2>
@@ -53,18 +53,27 @@
             %>
             <form class="checkout_form_div" method="post" action="main.jsp">
                 <%
-                    checkout.addBooking(new checkout(checkoutTutor.getName(), checkoutTutor.getEmail(), user.getName(), user.getEmail(), checkoutTutor.getSubject(), "active"));
+                    checkout.addBooking(new checkout(checkoutOrder.getTitle(), checkoutOrder.getEmail(), checkoutOrder.getPrice(), checkoutOrder.getSaleTotal(), checkoutOrder.verifyStatus(), user.getName(), user.getEmail()));
                     checkoutApp.updateXML(checkout, checkoutPath);
                 %>
                 <input class="button" type="submit" value="Create Booking">
 
             </form>
             <%}%>
+           
         </div>
 
         <% if (user != null) {
                 session.setAttribute("user", user);
+            }else if (order!= null) {
+                session.setAttribute("order", order);
             }
         %>
+        
+        <%
+            s
+        %>
+       
+    </form>
     </body>
 </html>
