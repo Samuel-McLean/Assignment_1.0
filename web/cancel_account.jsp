@@ -1,8 +1,8 @@
-<%@page import="uts.checkout.Orders"%>
-<%@page import="uts.checkout.Order"%>
+<%@page import="uts.movie.checkout.Orders"%>
+<%@page import="uts.movie.checkout.Order"%>
 <%@page import="java.util.ArrayList"%>
-<%@page import="uts.user.User"%>
-<%@page import="uts.user.Users"%>
+<%@page import="uts.movie.user.User"%>
+<%@page import="uts.movie.user.Users"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
@@ -12,14 +12,14 @@
     </head>
         <% String orderPath = application.getRealPath("WEB-INF/users.xml");%>
 
-        <jsp:useBean id="orderApp" class="uts.checkout.OrderApplication" scope="application">
+        <jsp:useBean id="orderApp" class="uts.movie.checkout.OrderApplication" scope="application">
             <jsp:setProperty name="orderApp" property="filePath" value="<%=orderPath%>"/>
         </jsp:useBean>
         <%Orders orders = orderApp.getOrders(); %>
         
         <% String userPath = application.getRealPath("WEB-INF/users.xml");%>
 
-        <jsp:useBean id="userApp" class="uts.user.UserApplication" scope="application">
+        <jsp:useBean id="userApp" class="uts.movie.user.UserApplication" scope="application">
             <jsp:setProperty name="userApp" property="filePath" value="<%=userPath%>"/>
         </jsp:useBean>
         <%Users users = userApp.getUsers(); %>
