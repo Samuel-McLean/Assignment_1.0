@@ -21,7 +21,6 @@
             <jsp:setProperty name="moviesApp" property="filePath" value="<%=moviePath%>"/>
         </jsp:useBean>
         <%Users users = userApp.getUsers();%>
-        <%Movies movies = moviesApp.getMovies();%>
         <%
             User user = (User) session.getAttribute("user");
             String log = "";
@@ -42,13 +41,15 @@
                 session.removeAttribute("checkoutMsg");
                 String email = request.getParameter("emailSelect");
                 if (email != null) {
-                    ArrayList<Movies> movieList = new ArrayList();
+                    ArrayList<Movie> movies = new ArrayList();
+                    session.get
                     //need to put the title of the movie you are trying to checkout in getMovie(HERE, PUT IT HERE). 
-                    Movie checkoutMovie = movies.getMovie();
-                    movieList.add(checkoutMovie);
-                    if (movieList.size() > 0) {
+//                    Movies checkoutMovie = new Movies();
+//                    checkoutMovie.getMovie(title);
+//                    movies.add(checkoutMovie);
+//                    if (movies.size() > 0) {
                         //make a print
-                        movies.print(movieList, out);
+//                        movie.print(movies, out);
                     }
             %>
             <form class="checkout_form_div" method="post" action="main.jsp">

@@ -1,4 +1,4 @@
-package uts.user;
+package uts.move.user;
 
 import java.text.DateFormat;
 import java.text.ParseException;

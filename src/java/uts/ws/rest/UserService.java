@@ -5,9 +5,9 @@ import javax.servlet.ServletContext;
 import javax.ws.rs.*;
 import javax.ws.rs.core.*;
 import javax.xml.bind.JAXBException;
-import uts.user.User;
-import uts.user.UserApplication;
-import uts.user.Users;
+import uts.move.user.User;
+import uts.move.user.UserApplication;
+import uts.move.user.Users;
 
 @Path("/userApplication")
 public class UserService {    
