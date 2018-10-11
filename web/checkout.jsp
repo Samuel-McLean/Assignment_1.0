@@ -69,11 +69,6 @@
                 session.setAttribute("order", order);
             }
         %>
-        
-        <%
-            s
-        %>
-       
     </form>
     </body>
 </html>
