@@ -2,9 +2,9 @@ package uts.ws.soap;
 
 import javax.jws.WebService;
 import javax.jws.WebMethod;
-import javax.jws.WebParam;
-import uts.user.User;
-import uts.user.Users;
+
+import uts.movie.user.User;
+import uts.movie.user.Users;
 
 @WebService(serviceName = "UsersLogin")
 public class UsersLogin {

@@ -1,5 +1,5 @@
 <%@page import="uts.movie.*"%>
-<%@page import="uts.user.*"%>
+<%@page import="uts.movie.user.*"%>
 <%@page import="java.util.ArrayList"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 
@@ -13,7 +13,7 @@
     </head>
     <body>
         <% String userPath = application.getRealPath("WEB-INF/users.xml");%>
-        <jsp:useBean id="userApp" class="uts.user.UserApplication" scope="application">
+        <jsp:useBean id="userApp" class="uts.movie.user.UserApplication" scope="application">
             <jsp:setProperty name="userApp" property="filePath" value="<%=userPath%>"/>
         </jsp:useBean>
         <% String moviePath = application.getRealPath("WEB-INF/movies.xml");%>

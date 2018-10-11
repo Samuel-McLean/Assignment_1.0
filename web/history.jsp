@@ -1,7 +1,7 @@
 <%@page import="uts.movie.*"%>
-<%@page import="uts.user.*"%>
+<%@page import="uts.movie.user.*"%>
 <%@page import="java.util.ArrayList"%>
-<%@page import="uts.checkout.*"%>
+<%@page import="uts.movie.checkout.*"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
@@ -16,7 +16,7 @@
         </div>
 
         <% String bookingsPath = application.getRealPath("WEB-INF/bookings.xml");%>        
-        <jsp:useBean id="bookingApp" class="uts.checkout.OrderApplication" scope="application">
+        <jsp:useBean id="bookingApp" class="uts.movie.checkout.OrderApplication" scope="application">
             <jsp:setProperty name="bookingApp" property="filePath" value="<%=bookingsPath%>"/>
         </jsp:useBean>
 <<<<<<< HEAD
