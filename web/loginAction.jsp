@@ -1,4 +1,4 @@
-<%@page import="uts.user.*"%>
+<%@page import="uts.movie.user.*"%>
 <%@page import="uts.controller.Validator"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
@@ -9,7 +9,7 @@
     </head>
     <body>
         <% String userPath = application.getRealPath("WEB-INF/users.xml");%>
-        <jsp:useBean id="userApp" class="uts.user.UserApplication" scope="application">
+        <jsp:useBean id="userApp" class="uts.movie.user.UserApplication" scope="application">
             <jsp:setProperty name="userApp" property="filePath" value="<%=userPath%>"/>
         </jsp:useBean>
         <%Users users = userApp.getUsers();%>
@@ -32,9 +32,5 @@
                 session.setAttribute("existErr", "User does not exist!");               
             }
         %>
-        <%public Users fetchUsers(){
-            return users;
-}
-}%>
     </body>
 </html>

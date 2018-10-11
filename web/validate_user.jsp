@@ -1,5 +1,5 @@
+<%@page import="uts.movie.user.*"%>
 <%@page import="uts.controller.Validator"%>
-<%@page import="uts.user.*"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
