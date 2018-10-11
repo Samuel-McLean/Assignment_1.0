@@ -3,6 +3,18 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
+<<<<<<< HEAD
+            <file>file:/C:/Users/Sam/Desktop/Semester%202%20Year%202%20UTS/31284%20Web%20Services%20Development/Assignment_1.0/src/java/uts/ws/rest/MovieService.java</file>
+            <file>file:/C:/Users/Sam/Desktop/Semester%202%20Year%202%20UTS/31284%20Web%20Services%20Development/Assignment_1.0/src/java/uts/movie/Movies.java</file>
+            <file>file:/C:/Users/Sam/Desktop/Semester%202%20Year%202%20UTS/31284%20Web%20Services%20Development/Assignment_1.0/web/movie_search.jsp</file>
+            <file>file:/C:/Users/Sam/Desktop/Semester%202%20Year%202%20UTS/31284%20Web%20Services%20Development/Assignment_1.0/web/results.jsp</file>
+            <file>file:/C:/Users/Sam/Desktop/Semester%202%20Year%202%20UTS/31284%20Web%20Services%20Development/Assignment_1.0/src/java/uts/movie/MoviesApplication.java</file>
+            <file>file:/C:/Users/Sam/Desktop/Semester%202%20Year%202%20UTS/31284%20Web%20Services%20Development/Assignment_1.0/web/account.jsp</file>
+            <file>file:/C:/Users/Sam/Desktop/Semester%202%20Year%202%20UTS/31284%20Web%20Services%20Development/Assignment_1.0/web/styles.css</file>
+            <file>file:/C:/Users/Sam/Desktop/Semester%202%20Year%202%20UTS/31284%20Web%20Services%20Development/Assignment_1.0/web/checkout.jsp</file>
+            <file>file:/C:/Users/Sam/Desktop/Semester%202%20Year%202%20UTS/31284%20Web%20Services%20Development/Assignment_1.0/web/login.jsp</file>
+            <file>file:/C:/Users/Sam/Desktop/Semester%202%20Year%202%20UTS/31284%20Web%20Services%20Development/Assignment_1.0/web/index.jsp</file>
+=======
             <file>file:/Users/blah/Documents/GitHub/Assignment_1.0/src/java/users.xsl</file>
             <file>file:/Users/blah/Documents/GitHub/Assignment_1.0/src/java/uts/checkout/Orders.java</file>
             <file>file:/Users/blah/Documents/GitHub/Assignment_1.0/web/checkout.jsp</file>
@@ -16,6 +28,7 @@
             <file>file:/Users/blah/Documents/GitHub/Assignment_1.0/src/java/uts/checkout/Order.java</file>
             <file>file:/Users/blah/Documents/GitHub/Assignment_1.0/src/java/uts/controller/Validator.java</file>
             <file>file:/Users/blah/Documents/GitHub/Assignment_1.0/web/cancel_account.jsp</file>
+>>>>>>> c4d6686401e1bb4688e351a32c82ef85a5d71679
         </group>
     </open-files>
 </project-private>
